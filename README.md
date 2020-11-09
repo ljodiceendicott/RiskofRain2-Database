@@ -1,0 +1,2 @@
+# Risk-of-Rain-2-Database
+This project was made by using the data given to us(the user) by the developer of the game Risk of Rain 2, Hopoo Games. With the use of Netbeans as an IDE I have made a Graphic User Interface that allows the user of the program to get information on an item, playable character, or enemy within the game. This code will be written entirely using JAVA with components from the Swing Library as well as the Utility library.
