@@ -1,38 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pulls
-Issues
-Marketplace
-Explore
- 
-@ljodiceendicott 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-ljodiceendicott
-/
-RiskofRain2-Database
-Private
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-RiskofRain2-Database/formatedROR2data.txt
-@ljodice
-ljodice adding numbers for arrays
-Latest commit cc1d479 1 hour ago
- History
- 1 contributor
-469 lines (469 sloc)  19 KB
-  
 white
 Soldier's Syringe
 Increases attack speed
@@ -501,9 +466,4 @@ other
 Dio's Best Friend (Consumed)
 A spent item with no remaining power.
 A spent item with no remaining power.
-<<<<<<< HEAD
 0 0 0 0 0 0 0 0 0 0	
-
-=======
-0 0 0 0 0 0 0 0 0 0	
->>>>>>> cc1d4792634063a4cdc66db87480c316702df820
