@@ -5,14 +5,15 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.io.FileNotFoundException;
+import java.util.Hashtable;
 
 /**
  *
  * @author lukej
  */
-public class Main {
-    
-    public static void main(String[] args){
+public class DataClass {
+  //   public static Hashtable<String,GameItem> items; 
+    public DataClass() throws FileNotFoundException{
     }
-    
 }
