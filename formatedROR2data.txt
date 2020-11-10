@@ -501,5 +501,9 @@ other
 Dio's Best Friend (Consumed)
 A spent item with no remaining power.
 A spent item with no remaining power.
+<<<<<<< HEAD
 0 0 0 0 0 0 0 0 0 0	
 
+=======
+0 0 0 0 0 0 0 0 0 0	
+>>>>>>> cc1d4792634063a4cdc66db87480c316702df820
