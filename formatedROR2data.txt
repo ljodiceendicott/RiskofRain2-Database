@@ -1,374 +1,469 @@
 white
 Soldier's Syringe
 Increases attack speed
-Increases attack speed by 15% (+15% per stack)
+Increases attack speed by 15% (+15% per stack) stacks linearly.
+0 15 30 45 60 75 90 105 120 135 150
 red
 57 Leaf Clover
 Luck is on your side
-All random effects are rolled +1(+1 per stack) times for a favorable outcome
+All random effects are rolled +1(+1 per stack) times for a favorable outcome. stacks linearly.
+1 2 3 4 5 6 7 8 9 10 11
 white
 Tougher Times
 Chance to block incoming damage
-15% (+15% per stack)chance to block incoming damage.Unaffected by luck
+15% (+15% per stack)chance to block incoming damage.Unaffected by luck. Also stacks hyperbolicly.
+0 13 23.1 31 37.5 42.9 47.4 51.2 54.5 57.4 60
 red
 Brilliant Behemoth
 All your attacks explode!
-All your attacks explode in a 4m (+1.5m per stack) radius for a bonus TOTAL damage to nearby enemies
+All your attacks explode in a 4m (+1.5m per stack) radius for a bonus TOTAL damage to nearby enemies 
+0 4 5.5 7 8.5 10 22.5 24 25.5 27
 green
 AtG Missile Mk. 1
 Chance to fire a missile
-10% chance to fire a missile that deals 300%(+300% per stack)TOTAL damage.
+10% chance to fire a missile that deals 300%(+300% per stack)TOTAL damage.Stacks linearly.  
+0 300 600 900 1200 1500 1800 2100 2400 2700 3000
 green
 Will-o'-the-wisp
 Detonate enemies on kill
-On killing an enemy, spawn a lava pillar in a 12m(+2.4m per stack) radius for 350%(+280% per stack)base damage.
+On killing an enemy, spawn a lava pillar in a 12m(+2.4m per stack) radius for 350%(+280% per stack)base damage.Stacks linearly 
+0 350 630 910 1190 1470 1750 2030 2310 2590
 red
 Ceremonial Dagger
 Killing an enemy releases homing daggers.",
-Killing an enemy fires out 3 homing daggers that deal 150%(+150% per stack) base damage.",
+Killing an enemy fires out 3 homing daggers that deal 150%(+150% per stack) base damage.", 
+0 150 300 450 600 750 900 1050 1200 1350 1500 
 white
 Monster Tooth
 Drop a healing orb on kill.",
 Killing an enemy spawns a healing orb that heals for 8 plus an additional 2%(+2% per stack) of maximum health.
+0 2 4 6 8 10 12 14 16 18 20
 white
 Lens-Maker's Glasses
 Chance to Critically Strike, dealing double damage.
 Your attacks have a 10%(+10% per stack) chance to Critically Strike, dealing double damage.
+0 10 20 30 40 50 60 70 80 90 100
 white
 Paul's Goat Hoof
 Move faster
 Increases movement speed by 14%(+14% per stack).
+0 14 28 42 56 70 84 98 112 126 140
 green
 Hopoo Feather
 Gain an extra jump
 Gain +1(+1 per stack) maximum jump count.
-green
+1 2 3 4 5 6 7 8 9 10 11
+green 
 Ukulele
 ...and his music was electric
-25% chance to fire chain lightning for 80% TOTAL damage on up to 3(+2 per stack) targets within 20m(+2m per stack).
+25% chance to fire chain lightning for 80% TOTAL damage on up to 3(+2 per stack) targets within 20m(+2m per stack).stacks linearly
+0 3 5 7 9 11 13 15 17 19 21
 green
 Leeching Seed
 Dealing damage heals you.
 Dealing damage heals you for 1(+1 per stack) health.
+0 1 2 3 4 5 6 7 8 9 10
 red
 Frost Relic
 Killing enemies surrounds you with an ice storm.
 Killing an enemy surrounds you with an ice storm that deals 600% damage per second. The storm grows with every kill, increasing its radius by 1m. Stacks up to 6m(+6m per stack).
+0 6 12 18 24 32 36 42 48 54 60
 red
 Happiest Mask
 Chance on killing an enemy to summon a ghost.
 Killing enemies has a 7% chance to spawn a ghost of the killed enemy with 1500% damage. Lasts 30s(+30s per stack).
+0 30 60 90 120 150 180 210 240 270 300
 white
 Bustling Fungus
 Heal all nearby allies after standing still for 2 seconds.
 After standing still for 2 seconds, create a zone that heals for 4.5%(+2.25% per stack) of your health every second to all allies within 3m(+1.5m per stack).
+0 4.5 6.75 9 11.25 13.5 15.75 18 20.25 22.5 24.75
 white
 Crowbar
 Deal more damage to healthy enemies.
 Deal 150%(+50% per stack) damage to enemies above 90% health.
+0 150 200 250 300 350 400 450 500 550 600
 green
 Predatory Instincts
 Critical Strikes increase attack speed. Stacks 3 times.
 Critical strikes increase attack speed by 12%. Maximum cap of 36%(+24% per stack) attack speed.
+0 36 60 84 108 132 156 180 204 228 252
 white
 Tri-Tip Dagger
 Chance to bleed enemies on hit.
 15%(+15% per stack) chance to bleed an enemy for 240% base damage.
+0 15 30 45 60 75 90 105 120 135 150
 green
 Red Whip
 Move fast out of combat.
 Leaving combat boosts your movement speed by 30%(+30% per stack).
+0 30 60 90 120 150 180 210 240 270 300
 red
 H3AD-5T v2
 Increase jump height. Hold 'Interact' to slam down to the ground.
 Increase jump height. Creates a 5m-100m radius kinetic explosion on hitting the ground, dealing 1000%-10000% base damage that scales up with speed. Recharges in 10(-50% per stack)seconds.
+0 10 5 2.5 1.25 .625 .3125 .156 .078 .039 .019 
 white
 Warbanner
 Drop a Warbanner on level up or starting the Teleporter event. Grants allies attack and movement speed.
 On level up or starting the Teleporter event, drop a banner that strengthens all allies within 16m(+8m per stack). Raise attack and movement speed by 30%.
+0 16 24 32 40 48 56 64 72 80 88
 green
 Berzerker's Pauldron
 Enter a frenzy after killing 3 enemies in quick succession.
 Killing 3 enemies within 1 second sends you into a frenzy for 6s(4s per stack). Increases movement speed by 50% and attack speed by 100%.
+0 6 10 14 18 22 26 30 34 38 42
 green
 Old War Stealthkit
 Turn invisible on taking heavy damage.
 Chance on taking damage to gain 40% movement speed and invisibility for 3s(+1.5s per stack). Chance increases the more damage you take.
+0 3 4.5 6 7.5 9 10.5 12 13.5 15 16.5
 green
 Harvester's Scythe
 Critical Strikes heal you.
 Gain 5% critical chance. Critical strikes heal for 8 (+4 per stack)health.
+0 8 12 16 22 26 30 34 38 42 46 
 white
 Cautious Slug
 Rapidly heal outside of danger.
 Increases base health regeneration by +3 hp/s(+3 hp/s per stack)while outside of combat.
+0 3 6 9 12 15 18 21 24 27 30
 green
 Wax Quail
 Jumping while sprinting boosts you forward
 Jumping while sprinting boosts you forward by 10m(+10m per stack).
+0 10 20 30 40 50 60 70 80 90 100
 white
 Personal Shield Generator
 Gain a recharging shield.
 Gain a shield equal to 8%(+8% per stack) of your maximum health. Recharges outside of danger.
+0 8 16 24 32 40 48 56 64 72 80
 red
 N'kuhana's Opinion
 Fire haunting skulls when healed.
 Store 100%(+100% per stack) of healing as Soul Energy. After your Soul Energy reaches 10% of your maximum health, fire a skull that deals 250% of your Soul Energy as damage.
+0 100 200 300 400 500 600 700 800 900 1000
 white
 Medkit
 Receive a delayed heal after taking damage.
 2 seconds after getting hurt, heal for 20 plus an additional 5%(+5% per stack) of maximum health.
+0 5 10 15 20 25 30 35 40 45 50
 green
 Fuel Cell
 Hold an additional equipment charge. Reduce equipment cooldown.
 Hold an additional equipment charge(+1 per stack). Reduce equipment cooldown by 15% (+15% per stack).
+0 15 30 45 60 75 90 105 120 135 150
 green
 Infusion
 Killing an enemy permanently increases your health, up to 100.
 Killing an enemy increases your health permanently by 1>(+1 per stack), up to a maximum of 100(+100 per stack) health.
+0 100 200 300 400 500 600 700 800 900 1000
 red
 Unstable Tesla Coil
 Shock all nearby enemies every 10 seconds.
 Fire out lightning that hits 3(+2 per stack) enemies for 200% base damage every 0.5s. The Tesla Coil switches off every 10 seconds.
+0 3 5 7 9 11 13 15 17 19 21 
 white
 Gasoline
 Killing enemies sets nearby enemies on fire.
 Killing an enemy ignites all enemies within 12m(+4m per stack). Enemies burn for 150%(+75% per stack) base damage.
-red
+0 150 225 300 375 450 525 600 675 750
+red	
 Sentient Meat Hook
 Chance to hook all nearby enemies.
 20%(+20% per stack) chance on hit to fire homing hooks at up to 10(+5 per stack) enemies for 100% TOTAL damage.
+0 10 15 20 25 30 35 40 45 50 55
 white
 Bundle of Fireworks
 Activating an interactable launches fireworks at nearby enemies.Activating an interactable launches 8 (+4 per stack) fireworks that deal 300% base damage.
+0 8 12 16 20 24 28 32 36 40
 green
 Bandolier
 Chance on kill to drop an ammo pack that resets all skill cooldowns.
 18%(+10% on stack) chance on kill to drop an ammo pack that resets all skill cooldowns.
+0 18 28 38 48 58 68 78 88 98 108
 white
 Stun Grenade
 Chance to stun on hit.
 5% (+5% on stack) chance on hit to stun enemies for 2 seconds.
-lunar
+0 5 10 15 20 25 30 35 40 45 50
+blue
 Shaped Glass
 Double your damage... (BUT halve your health).
 Increase base damage by 100%(+100% per stack)Reduce maximum health by 50% of Current Max health(+50% per stack).
-lunar
+100 50 25 12.5 6.25 3.125 1.5625 .78125 .39 .1953
+blue
 Brittle Crown
 Gain gold on hit...(BUT lose gold on getting hit).
 30% chance on hit to gain 2(+2 per stack) gold. Scales over time.\n\n Lose gold on taking damage equal to 100% (+100% per stack) of the maximum health percentage you lost.
-lunar
+0 2 4 6 8 10 12 14 16 18 20
+blue
 Transcendence
 Convert all your health into shield. Increase maximum health.
 Convert all but 1 health into regenerating shields.Gain 50%(+25% per stack) maximum health.
+100 150 175 200 225 250 275 300 325 350 375
 red
 Alien Head
 Reduces cooldowns for your skills.
 Reduce skill cooldowns by 25%(+25% per stack).
+0 25 50 75 100 125 150 175 200 225 250
 red
 Soulbound Catalyst
 Kills reduce equipment cooldown.
 Kills reduce equipment cooldown by 4s(+2s per stack).
+0 4 6 8 10 12 14 16 18 20
 boss
 Titanic Knurl
 Boosts health and regeneration.
 Increase maximum health by 40(+40 per stack) and base health regeneration by +1.6 hp/s(+1.6 hp/s per stack).
+0 1.6 3.2 4.8 6.4 8 9.6 11.2 12.8 14.4 16
 boss
 Queen's Gland
 Recruit a Beetle Guard
 Every 30 seconds, summon a Beetle Guard with bonus 300% damage and 100% health. Can have up to 1(+1 per stack) Guards at a time.
+0 1 2 3 4 5 6 7 8 9 10
 white
 Energy Drink
 Sprint faster.
 Sprint speed is improved by 30%(+20% per stack).
+0 30 50 70 90 110 130 150 170 190 210
 white
 Backup Magazine
 Add an extra charge of your Secondary skill.
 Add +1(+1 per stack) charge of your Secondary skill.
+1 2 3 4 5 6 7 8 9 10 11
 white
 Sticky Bomb
 Chance on hit to attach a bomb to enemies.
 5%(+5% per stack) chance on hit to attach a bomb to an enemy, detonating for 180% TOTAL damage.
+0 5 10 15 20 25 30 35 40 45 50
 white
 Rusted Key
 Gain access to a Rusty Lockbox that contains treasure.
 A hidden cache containing an item will appear in a random location on each stage. (Increases rarity of the item per stack).
+0 0 0 0 0 0 0 0 0 0 0
 white
 Armor-Piercing Rounds
 Deal extra damage to bosses.
 Deal an additional 20% damage (+20% per stack) to bosses.
+0 20 40 60 80 100 120 140 160 180 200
 green
 Rose Buckler
 Reduce incoming damage while sprinting.
 Increase armor by 30(+30 per stack) while sprinting.
+0 30 60 90 120 150 180 210 240 270 300
 green
 Runald's Band
 High damage hits also blasts enemies with runic ice. Recharges over time.
 Hits that deal more than 400% damage also blasts enemies with a runic ice blast, slowing them by 80% for 3s(+3s per stack) and dealing 250%(+250% per stack) TOTAL damage. Recharges every 10 seconds.
+0 250 500 750 1000 1250 1500 1750 2000 2250 2500
 green
 Kjaro's Band
 High damage hits also blasts enemies with a runic flame tornado. Recharges over time.
 Hits that deal more than 400% damage also blasts enemies with a runic flame tornado, dealing 300%(+300% per stack) TOTAL damage over time. Recharges every 10 seconds.",
+0 300 600 900 1200 1500 1800 2100 2400 2700 3000
 green
 Chronobauble
 Slow enemies on hit.
 Slow enemies on hit for -60% movement speed for 2s(+2s per stack).
+0 2 4 6 8 10 12 14 16 18 20
 red
 Dio's Best Friend
 Cheat death. Consumed on use.
 Upon death, this item will be consumed and you will return to life with 3 seconds of invulnerability.
+0 0 0 0 0 0 0 0 0 0
 red
 Hardlight Afterburner
 Add 2 extra charges of your Utility skill. Reduce Utility skill cooldown.
 Add +2(+2 per stack) charges of your Utility skill.Reduces Utility skill cooldown by 33%.
+1 3 5 7 9 11 13 15 17 19 21
 red
 Wake of Vultures
 Temporarily steal the power of slain elites.
 Gain the power of any killed elite monster for 8s(+5s per stack).
+0 8 13 18 23 28 33 38 43 48 53
 red
 Brainstalks
 Skills have NO cooldowns for a short period after killing an elite.
 Upon killing an elite monster, enter a frenzy for 4s(+4s per stack) where skills have no cooldowns.
+0 4 8 12 16 24 32 36 40 44 48
 red
 Rejuvenation Rack
 Double the strength of healing.
 Heal +100%(+100% per stack) more.
-lunar
+0 100 200 300 400 500 600 700 800 900 1000
+blue
 Corpsebloom
 Double your healing... (BUT it's applied over time)\n
 Heal +100%(+100% per stack)more. All healing is applied over time. Can heal for a maximum of 10%(-50% per stack) of your health per second.
-lunar
+0 10 5 2.5 1.25 .625 .3125 .15625 .078125 .039 .01953
+blue
 Gesture of the Drowned
 Dramatically reduce Equipment cooldown... (BUT it automatically activates).
 Reduce Equipment cooldown by 50%(+15% per stack).Forces your Equipment to activate whenever it is off cooldown.
+100 50 35 20 5 0 0 0 0 0
 green
 Old Guillotine
 Instantly kill low health Elite monsters.
 Instantly kill Elite monsters below 13% (+13% per stack) health.
+0 13 26 39 52 65 78 91 104 117 130
 green
 War Horn
 Activating your Equipment gives you a burst of attack speed.
 Activating your Equipment gives you +70% attack speed for 8s(+4s per stack).
+0 8 12 16 20 24 28 32 36 40 44
 red
 Aegis
 Healing past full grants you a temporary barrier.
 Healing past full grants you a temporary barrier for 50% (+50% per stack)of the amount you healed.
+0 50 100 150 200 250 300 350 400 450 500
 boss
 Halcyon Seed
 Summon Aurelionite during the Teleporter event.
 Summon Aurelionite during the teleporter event. It has 100% (+50% per stack)damage and 100%(+100% per stack) health.
+0 100 150 200 250 300 350 400 450 500 450
 boss
 Little Disciple
 Fire tracking wisps while sprinting.
 Fire a tracking wisp for 300% (+300% per stack) damage. Fires every 1.6 seconds while sprinting. Fire rate increases with movement speed.
+0 300 600 900 1200 1500 1800 2100 2400 2700 3000
 white
 Topaz Brooch
 Gain a temporary barrier on kill.
 Gain a temporary barrier on kill for 15 health (+15 per stack).
+0 15 30 45 60 75 90 105 120 135 150
 red
 Shattering Justice
 Reduce the armor of enemies after repeatedly striking them.
 After hitting an enemy 5 times, reduce their armor by 60 for 8(+8 per stack) seconds.
+0 8 16 24 32 40 48 56 64 72 80
 green
 Lepton Daisy
 Periodically release a healing nova during the Teleporter event.
 Release a healing nova during the Teleporter event, healing all nearby allies for 50% of their maximum health. Occurs 1(+1 per stack) times.
+0 1 2 3 4 5 6 7 8 9 10
 white
 Focus Crystal
 Deal bonus damage to nearby enemies.
 Increase damage to enemies within 13m by 15%(+15% per stack).
-lunar
+0 15 30 45 60 75 90 105 120 135 150
+blue
 Strides of Heresy
 Replace your Utility Skill with Shadowfade.
 Replace your Utility Skill with Shadowfade. \n\nFade away, becoming intangible and gaining +30% movement speed. Heal for 25%(+25% per stack) of your maximum health. Lasts 3(+3 per stack)seconds.
+0 25 50 75 100 125 150 175 200 225 250
 green
 Razorwire
 Retaliate in a burst of razors on taking damage.
 Getting hit causes you to explode in a burst of razors, dealing 160% damage. Hits up to 5(+2 per stack) targets in a 25m(+10m per stack) radius.
+0 5 7 9 11 13 15 17 19 21 23 
 white
 Fresh Meat
 Regenerate health after killing an enemy.
 Increasesbase health regeneration by +2 hp/s for 3s(+3s per stack) after killing an enemy.
+0 3 6 9 12 15 18 21 24 27 30
 boss
 Pearl
 Increase your maximum health.
 Increases maximum health by 10%(+10% per stack).
+0 10 20 30 40 50 60 70 80 90 100
 boss
 Irradiant Pearl
 Increase ALL of your stats.
 Increases ALL stats by 10%(+10% per stack).
+0 10 20 30 40 50 60 70 80 90 100
 green
 Ghor's Tome
 Chance on kill to drop a treasure.
 4%(+4% on stack) chance on kill to drop a treasure worth $25.Scales over time.
+0 4 8 12 16 20 24 28 32 36 40
 red
 Resonance Disc
-Obtain a Resonance Disc charged by killing enemies. Fires automatically when fully charged. Killing enemies charges the Resonance Disc. The disc launches itself toward a target for 300% base damage (+300% per stack), piercing all enemies it doesn't kill, and then explodes for 1000% base damage (+1000% per stack). Returns to the user, striking all enemies along the way for 300% base damage(+300% per stack).
-lunar
+Obtain a Resonance Disc charged by killing enemies. Fires automatically when fully charged. Killing enemies charges the Resonance Disc. 
+The disc launches itself toward a target for 300% base damage (+300% per stack), piercing all enemies it doesn't kill, and then explodes for 1000% base damage (+1000% per stack). Returns to the user, striking all enemies along the way for 300% base damage(+300% per stack).
+0 300 600 900 1200 1500 1800 2100 2400 2700 3000
+blue
 Visions of Heresy
 Replace your Primary Skill with Hungering Gaze.
 Replace your Primary Skill with Hungering Gaze. \n\nFire a flurry of tracking shards that detonate after a delay, dealing 120% base damage. Hold up to 12 charges (+12 per stack) that reload after 2 seconds(+2 per stack).
+0 12 24 36 48 60 72 84 96 108 120
 boss
 Genesis Loop
 Fire an electric nova at low health.
 Falling below 25% health causes you to explode, dealing 6000% base damage. Recharges every 30 seconds(-50% per stack).
-lunar
+0 30 15 7.5 3.75 1.875 .9375 .46875 .234375 .117188 .058593
+blue
 Beads of Fealty
 Seems to do Nothing
 Seems to do Nothing
+0 0 0 0 0 0 0 0 0 0 0
 white
 Repulsion Armor Plate
 Receive flat damage reduction from all attacks.
 Reduce all incoming damage by 5 (+5 per stack). Cannot be reduced below 1.
+0 5 10 15 20 25 30 35 40 45 50
 green
 Squid Polyp
 Activating an interactable summons a Squid Turret nearby.
 Activating an interactable summons a Squid Turret that attacks nearby enemies at 100% (+100% per stack) attack speed. Lasts 30 seconds.
+0 100 200 300 400 500 600 700 800 900 1000
 green
 Death Mark
 Enemies with 4 or more debuffs are marked for death, taking bonus damage.
 Enemies with 4  or more debuffs are marked for death, increasing damage taken by 50% from all sources for 7(+7 per stack) seconds.
+0 7 14 21 28 35 42 49 56 63 70
 red
 Interstellar Desk Plant
 Plant a healing fruit on kill
 On kill, plant a healing fruit seed that grows into a plant after 5 seconds. \n\nThe plant heals for 10% of maximum health every second to all allies within 5m(+5.0m per stack). Lasts 10 seconds.
-lunar
+0 5 10 15 20 25 30 35 40 45 50
+blue
 Focused Convergence
 Increase the speed of Teleporter charging...(BUT reduce the size of the zone).
 Teleporters charge 30%(+30% per stack) faster, but the size of the Teleporter zone is 50%(-50% per stack) smaller.
+0 30 60 90 120 150 180 210 240 270 300
 boss
 Molten Perforator
 Chance on hit to fire magma balls.
 10% chance on hit to call forth 3 magma balls from an enemy, dealing 300%(+300% per stack) damage each.
+0 300 600 900 1200 1500 1800 2100 2400 2700 3000
 boss
 Shatterspleen
 Critical strikes always bleed enemies. Bleeding enemies now explode.
 Critical Strikes bleed enemies for 240% base damage. Bleeding enemies explode on death for 400%(+400% per stack)damage, plus an additional 15%(+15% per stack) of their maximum health.
+0 400 800 1200 1600 2000 2400 2800 3200 3600 4000
 boss
 Mired Urn
 Siphon health from nearby characters while in combat.
 While in combat, the nearest 1(+1 per stack)characters to you within 13m will be tethered to you, dealing 100% damage per second, applying tar, and healing you for 100% of the damage dealt.
-lunar
+0 1 2 3 4 5 6 7 8 9 10
+blue
 Defiant Gouge
 Using a Shrine summons enemies nearby.
 Using a Shrine summons enemies nearby.Scales over time.
-lunar
+0 0 0 0 0 0 0 0 0 0
+blue
 Mercurial Rachis
 Randomly create a Ward of Power. ALL characters deal bonus damage while in the Ward.
 Creates a Ward of Power in a random location nearby that buffs both enemies and allies within 16m(+50% per stack), causing them to deal +50% damage.",
+0 16 24 36 54 81 121.5 182.25 273.375 410.0625
 red
 Defensive Microbots
 Shoot down nearby projectiles. Recharge rate scales with attack speed.
 Shoot down 1(+1 per stack) projectiles within 20m every 0.5 seconds Recharge rate scales with attack speed. Item only found on Survivor Captain(His Starting Item).
+0 1 2 3 4 5 6 7 8 9 10
 other
 Item Scrap(white,green,red,yellow)
 Does nothing. Prioritized when used with 3D Printers.
 Does nothing. Prioritized when used with 3D Printers.
+0 0 0 0 0 0 0 0 0 0 
 other
 Tonic Affliction
 Reduce ALL stats when not under the effects of Spinel Tonic.
 Reduce ALL stats when not under the effects of Spinel Tonic.
+0 0 0 0 0 0 0 0 0 0
 other
-Dio's Best Friend (Consumed).
+Dio's Best Friend (Consumed)
 A spent item with no remaining power.
 A spent item with no remaining power.
+0 0 0 0 0 0 0 0 0 0	
