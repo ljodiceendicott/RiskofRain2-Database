@@ -11,8 +11,12 @@ package jodicelukeendicott.riskofrain2database;
  * @author lukej
  */
 public class Main {
+   static MainMenuWin mmw;
     
     public static void main(String[] args){
+        mmw = new MainMenuWin();
+        mmw.setVisible(true);
+        
     }
     
 }

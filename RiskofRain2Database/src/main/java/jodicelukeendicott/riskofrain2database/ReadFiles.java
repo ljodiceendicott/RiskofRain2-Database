@@ -14,8 +14,13 @@ import java.util.Scanner;
  *
  * @author lukej
  */
-public class ReadFile{
+public class ReadFiles{
     private Scanner x;
+    
+    public ReadFiles() throws FileNotFoundException{
+        this.readItemFile();
+        //this.readEntityFile();
+    }
     
     public static void readItemFile() throws FileNotFoundException{
     File text= new File("\\..\\..\\..\\..\\..\\..\\FormatedROR2Data.txt");
@@ -34,7 +39,9 @@ public class ReadFile{
        //initialize new Gameitem
        //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack
        GameItem itm = new GameItem(itemType, name, pickupdesc,effect,stat);
-     //  items.put(itm.rarity,itm);
+      //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
+      //Ex. <white, Sodacan>
+       DataClass.items.put(itm.rarity,itm);
        
     }
         

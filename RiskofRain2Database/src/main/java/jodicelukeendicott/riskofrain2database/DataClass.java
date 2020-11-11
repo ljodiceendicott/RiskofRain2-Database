@@ -13,7 +13,16 @@ import java.util.Hashtable;
  * @author lukej
  */
 public class DataClass {
-  //   public static Hashtable<String,GameItem> items; 
+    public static Hashtable<String,GameItem> items;
+    ReadFiles rf;
+    
     public DataClass() throws FileNotFoundException{
+        //creation of the hashtables that will hold the information
+        items = new Hashtable<>();
+        rf = new ReadFiles();
+        
     }
+    //items classes
+    
+    
 }

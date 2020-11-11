@@ -26,6 +26,7 @@ public class GameItem {
        this.pickuptext = pickuptext;
        this.effect = effect;
        this.stack = stack;
+       //Icon
     }
     
 }
