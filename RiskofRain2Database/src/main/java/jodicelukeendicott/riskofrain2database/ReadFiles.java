@@ -41,7 +41,7 @@ public class ReadFiles{
        GameItem itm = new GameItem(itemType, name, pickupdesc,effect,stat);
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
       //Ex. <white, Sodacan>
-       DataClass.items.put(itm.rarity,itm);
+       DataClass.items.put(itm.getRarity(),itm);
        
     }
         

@@ -6,19 +6,20 @@
 package jodicelukeendicott.riskofrain2database;
 
 import java.util.ArrayList;
-import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 /**
  *
  * @author lukej
  */
 public class GameItem {
-    String rarity;
-    String name;
-    String pickuptext;
-    String effect;
+    private String rarity;
+    private String name;
+    private String pickuptext;
+    private String effect;
     ArrayList<Double> stack;
-    Icon img;
+    String imageloc;
+    ImageIcon img;
     
     GameItem(String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack){
        this.rarity = rarity;
@@ -26,7 +27,40 @@ public class GameItem {
        this.pickuptext = pickuptext;
        this.effect = effect;
        this.stack = stack;
+       this.imageloc = "/../../../pictures/items/"+this.rarity+"/"+this.name+".png";
+       this.img = new javax.swing.ImageIcon(getClass().getResource(this.imageloc));
        //Icon
+    }
+    public ImageIcon getIcon(){
+        return img;
+    }
+
+    /**
+     * @return the rarity
+     */
+    public String getRarity() {
+        return rarity;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the pickuptext
+     */
+    public String getPickuptext() {
+        return pickuptext;
+    }
+
+    /**
+     * @return the effect
+     */
+    public String getEffect() {
+        return effect;
     }
     
 }
