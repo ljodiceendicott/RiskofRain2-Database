@@ -15,11 +15,13 @@ import javax.swing.ListCellRenderer;
  * @author lukej
  */
 public class ItemRenderer extends javax.swing.JPanel implements ListCellRenderer<GameItem>{
+    private JList<GameItem> itemList;
+    private DefaultListModel<GameItem> dlm;
     /**
      * Creates new form ItemRenderer
      */
     public ItemRenderer() {
-        initComponents();
+      initComponents();
     }
 
     /**
@@ -32,21 +34,21 @@ public class ItemRenderer extends javax.swing.JPanel implements ListCellRenderer
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jLabIcon = new javax.swing.JLabel();
-        jLabDescrp = new javax.swing.JLabel();
-        jlabRarPerm = new javax.swing.JLabel();
         jLabRarity = new javax.swing.JLabel();
+        jLabName = new javax.swing.JLabel();
+        jLabDescrp = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
-        jLabIcon.setText("jLabel2");
+        jLabel2.setText("jLabel2");
 
-        jLabDescrp.setText("jLabel3");
+        jLabRarity.setText("Rarity:");
 
-        jlabRarPerm.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jlabRarPerm.setText("Rarity:");
+        jLabName.setText("Name:");
 
-        jLabRarity.setText("jLabel4");
+        jLabDescrp.setText("Description:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -54,30 +56,27 @@ public class ItemRenderer extends javax.swing.JPanel implements ListCellRenderer
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabDescrp, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlabRarPerm)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabRarity)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(jLabName)
+                    .addComponent(jLabRarity)
+                    .addComponent(jLabDescrp))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jLabName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 7, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlabRarPerm)
-                            .addComponent(jLabRarity))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabDescrp, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabIcon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addComponent(jLabRarity)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabDescrp))
+                    .addComponent(jLabIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -85,14 +84,17 @@ public class ItemRenderer extends javax.swing.JPanel implements ListCellRenderer
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabDescrp;
     private javax.swing.JLabel jLabIcon;
+    private javax.swing.JLabel jLabName;
     private javax.swing.JLabel jLabRarity;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jlabRarPerm;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
-@Override
+
+    @Override
 public Component getListCellRendererComponent(JList<? extends GameItem> list, GameItem value, int index, boolean isSelected, boolean cellHasFocus){
-jLabRarity.setText(value.getRarity());
-jLabDescrp.setText(value.getEffect());
+jLabRarity.setText("Rarity:"+value.getRarity());
+jLabName.setText("Name:"+value.getName());
+jLabDescrp.setText("Description"+value.getEffect());
 if(isSelected){
     setBackground(java.awt.Color.DARK_GRAY);
 }

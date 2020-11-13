@@ -5,15 +5,23 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.io.FileNotFoundException;
+
 
 /**
  *
  * @author lukej
  */
 public class Main {
-   static MainMenuWin mmw;
+   public static MainMenuWin mmw;
+   public static DataClass datac;
     
     public static void main(String[] args){
+       try {
+           datac = new DataClass();
+       } catch (FileNotFoundException ex) {
+           System.out.println("Error:"+ex);
+       }
         mmw = new MainMenuWin();
         mmw.setVisible(true);
         

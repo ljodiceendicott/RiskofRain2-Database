@@ -16,14 +16,17 @@ import java.util.Scanner;
  */
 public class ReadFiles{
     private Scanner x;
+    public static ArrayList<GameItem> alGameItem;
     
     public ReadFiles() throws FileNotFoundException{
+        alGameItem = new ArrayList<GameItem>();
         this.readItemFile();
         //this.readEntityFile();
     }
     
     public static void readItemFile() throws FileNotFoundException{
-    File text= new File("\\..\\..\\..\\..\\..\\..\\FormatedROR2Data.txt");
+    File text= new File("FormatedROR2Data.txt");
+    
        
     Scanner x = new Scanner(text);
     while(x.hasNext()){
@@ -36,12 +39,15 @@ public class ReadFiles{
           Double num = x.nextDouble();
           stat.add(num);
        }
+       
        //initialize new Gameitem
        //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack
        GameItem itm = new GameItem(itemType, name, pickupdesc,effect,stat);
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
       //Ex. <white, Sodacan>
        DataClass.items.put(itm.getRarity(),itm);
+       //adding game item to an arraylist making it so that I can put into dlm easier
+       alGameItem.add(itm);
        
     }
         
