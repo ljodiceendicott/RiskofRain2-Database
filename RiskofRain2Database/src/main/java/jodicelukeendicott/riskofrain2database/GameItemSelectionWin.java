@@ -22,6 +22,8 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     public GameItemSelectionWin() {
         dlm = new DefaultListModel<>();
         al = new ArrayList<>();
+        GameItem test;
+          initComponents();
           try {
             ReadFiles rf = new ReadFiles();
               al = rf.readItemFile();
@@ -32,9 +34,9 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
           al.forEach(itm -> {
               dlm.addElement(itm);
         }); //forloop
-       
-          initComponents();
-        
+          //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack){
+          GameItem random = new GameItem("Blue", "Itemname", "Its a item", "attackspeed+2");
+        dlm.addElement(random);
         
         
     }

@@ -27,9 +27,15 @@ public class GameItem {
        this.pickuptext = pickuptext;
        this.effect = effect;
        this.stack = stack;
-       this.imageloc = "/../../../pictures/items/"+this.rarity+"/"+this.name+".png";
-       this.img = new javax.swing.ImageIcon(getClass().getResource(this.imageloc));
+      // this.imageloc = "/../../../pictures/items/"+this.rarity+"/"+this.name+".png";
+       //this.img = new javax.swing.ImageIcon(getClass().getResource(this.imageloc));
        //Icon
+    }
+    GameItem(String rarity, String name, String pickuptext, String effect){
+       this.rarity = rarity;
+       this.name = name;
+       this.pickuptext = pickuptext;
+       this.effect = effect;
     }
     public ImageIcon getIcon(){
         return img;
