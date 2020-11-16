@@ -20,12 +20,13 @@ public class ReadFiles{
     
     public ReadFiles() throws FileNotFoundException{
         alGameItem = new ArrayList<GameItem>();
-        this.readItemFile();
         //this.readEntityFile();
     }
     
-    public static ArrayList<GameItem> readItemFile() throws FileNotFoundException{
-    File text= new File("FormatedROR2Data.txt");
+    public ArrayList<GameItem> readItemFile() throws FileNotFoundException{
+  //fix readin file, can not find file specified
+  //should try reading in file using other methods.
+        File text= new File("FormatedROR2Data.txt");
     
        
     Scanner x = new Scanner(text);

@@ -7,7 +7,6 @@ package jodicelukeendicott.riskofrain2database;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import javax.swing.DefaultListModel;
 
 /**
@@ -22,13 +21,17 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
      */
     public GameItemSelectionWin() {
         dlm = new DefaultListModel<>();
+        al = new ArrayList<>();
           try {
             ReadFiles rf = new ReadFiles();
-          al = rf.readItemFile();
+              al = rf.readItemFile();
+           
        } catch (FileNotFoundException ex) {
           System.out.println("Error:"+ ex);
        }
-         //forloop
+          al.forEach(itm -> {
+              dlm.addElement(itm);
+        }); //forloop
        
           initComponents();
         
