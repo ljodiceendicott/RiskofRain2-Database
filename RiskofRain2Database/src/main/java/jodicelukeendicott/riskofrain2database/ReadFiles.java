@@ -24,7 +24,7 @@ public class ReadFiles{
         //this.readEntityFile();
     }
     
-    public static void readItemFile() throws FileNotFoundException{
+    public static ArrayList<GameItem> readItemFile() throws FileNotFoundException{
     File text= new File("FormatedROR2Data.txt");
     
        
@@ -44,12 +44,11 @@ public class ReadFiles{
        //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack
        GameItem itm = new GameItem(itemType, name, pickupdesc,effect,stat);
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
-      //Ex. <white, Sodacan>
-       DataClass.items.put(itm.getRarity(),itm);
        //adding game item to an arraylist making it so that I can put into dlm easier
        alGameItem.add(itm);
        
     }
+    return alGameItem;
         
     }
     public void readEntityFile() throws FileNotFoundException{

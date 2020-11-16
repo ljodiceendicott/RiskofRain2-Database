@@ -16,12 +16,7 @@ public class Main {
    public static MainMenuWin mmw;
    public static DataClass datac;
     
-    public static void main(String[] args){
-       try {
-           datac = new DataClass();
-       } catch (FileNotFoundException ex) {
-           System.out.println("Error:"+ex);
-       }
+    public static void main(String[] args){ 
         mmw = new MainMenuWin();
         mmw.setVisible(true);
         

@@ -6,7 +6,6 @@
 package jodicelukeendicott.riskofrain2database;
 
 import java.awt.Component;
-import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 
@@ -15,8 +14,6 @@ import javax.swing.ListCellRenderer;
  * @author lukej
  */
 public class ItemRenderer extends javax.swing.JPanel implements ListCellRenderer<GameItem>{
-    private JList<GameItem> itemList;
-    private DefaultListModel<GameItem> dlm;
     /**
      * Creates new form ItemRenderer
      */
