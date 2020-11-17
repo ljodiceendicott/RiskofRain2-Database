@@ -34,9 +34,6 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
           al.forEach(itm -> {
               dlm.addElement(itm);
         }); //forloop
-          //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack){
-          GameItem random = new GameItem("Blue", "Itemname", "Its a item", "attackspeed+2");
-        dlm.addElement(random);
         
         
     }
@@ -52,38 +49,68 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
-        jButton1 = new javax.swing.JButton();
+        jbtngetinfo = new javax.swing.JButton();
         jbtnTglAll = new javax.swing.JToggleButton();
         jbtnTglWhite = new javax.swing.JToggleButton();
         jbtnTglGreen = new javax.swing.JToggleButton();
         jbtnTglRed = new javax.swing.JToggleButton();
         jbtnTglBoss = new javax.swing.JToggleButton();
-        jbtnInfo = new javax.swing.JToggleButton();
+        jbtnTglLunar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jList1.setModel(dlm);
         jScrollPane1.setViewportView(jList1);
 
-        jButton1.setText("Get Item Info");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbtngetinfo.setText("Get Item Info");
+        jbtngetinfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbtngetinfoActionPerformed(evt);
             }
         });
 
         jbtnTglAll.setSelected(true);
         jbtnTglAll.setText("All Items");
+        jbtnTglAll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglAllActionPerformed(evt);
+            }
+        });
 
         jbtnTglWhite.setText("White Items");
+        jbtnTglWhite.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglWhiteActionPerformed(evt);
+            }
+        });
 
         jbtnTglGreen.setText("Green Items");
+        jbtnTglGreen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglGreenActionPerformed(evt);
+            }
+        });
 
         jbtnTglRed.setText("Red Items");
+        jbtnTglRed.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglRedActionPerformed(evt);
+            }
+        });
 
         jbtnTglBoss.setText("Boss Items");
+        jbtnTglBoss.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglBossActionPerformed(evt);
+            }
+        });
 
-        jbtnInfo.setText("Lunar Items");
+        jbtnTglLunar.setText("Lunar Items");
+        jbtnTglLunar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglLunarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,8 +126,8 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                     .addComponent(jbtnTglGreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglRed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglBoss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbtnTglLunar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
@@ -120,19 +147,59 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbtnTglBoss)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnInfo)
+                        .addComponent(jbtnTglLunar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbtngetinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtngetinfoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbtngetinfoActionPerformed
 
+    private void jbtnTglWhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglWhiteActionPerformed
+        // TODO add your handling code here:
+        if(jbtnTglAll.isSelected()){
+            jbtnTglAll.setSelected(false);
+        }
+       /* dlm.clear();
+        for(int i=0; i>al.size(); i++){
+            if(!al.get(i).getRarity().equals("white")) {
+            dlm.addElement(al.get(i));
+            } }*/
+    }//GEN-LAST:event_jbtnTglWhiteActionPerformed
+
+    private void jbtnTglAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglAllActionPerformed
+        jbtnTglWhite.setSelected(false);
+        jbtnTglGreen.setSelected(false);
+        jbtnTglRed.setSelected(false);
+        jbtnTglBoss.setSelected(false);
+        jbtnTglLunar.setSelected(false);
+    }//GEN-LAST:event_jbtnTglAllActionPerformed
+
+    private void jbtnTglGreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglGreenActionPerformed
+        this.disableAllbtn();
+    }//GEN-LAST:event_jbtnTglGreenActionPerformed
+
+    private void jbtnTglRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglRedActionPerformed
+        this.disableAllbtn();
+    }//GEN-LAST:event_jbtnTglRedActionPerformed
+
+    private void jbtnTglBossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglBossActionPerformed
+        this.disableAllbtn();
+    }//GEN-LAST:event_jbtnTglBossActionPerformed
+
+    private void jbtnTglLunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglLunarActionPerformed
+        this.disableAllbtn();
+    }//GEN-LAST:event_jbtnTglLunarActionPerformed
+
+    private void disableAllbtn(){
+             if(jbtnTglAll.isSelected()){
+            jbtnTglAll.setSelected(false);}
+    }
     /**
      * @param args the command line arguments
      */
@@ -169,14 +236,14 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JList<GameItem> jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JToggleButton jbtnInfo;
     private javax.swing.JToggleButton jbtnTglAll;
     private javax.swing.JToggleButton jbtnTglBoss;
     private javax.swing.JToggleButton jbtnTglGreen;
+    private javax.swing.JToggleButton jbtnTglLunar;
     private javax.swing.JToggleButton jbtnTglRed;
     private javax.swing.JToggleButton jbtnTglWhite;
+    private javax.swing.JButton jbtngetinfo;
     // End of variables declaration//GEN-END:variables
 }

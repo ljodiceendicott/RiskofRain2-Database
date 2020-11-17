@@ -37,9 +37,9 @@ public class ReadFiles{
         try {
             x = new Scanner(text); 
             while(x.hasNext()){
-
        String itemType= x.next();
-       String name= x.next();
+       String nameuned= x.next();
+       String name = nameuned.replace('#',' ');
        String pickupdesc= x.nextLine();
        if("".equals(pickupdesc)){
        pickupdescr= x.nextLine();
@@ -48,14 +48,19 @@ public class ReadFiles{
        stacks = new ArrayList<>();
        for(int i = 0; i<11; i++){
           String numstr = x.next();
+          /* Tests to see if the items are being read in properly
+          System.out.println(name);
+          System.out.println(numstr);
+          */
           double num = Double.parseDouble(numstr);
           stacks.add(num);
        }
        
        
+       //Read through the file and see where I was missing the numbers
        
        
-       System.out.println("here");
+      
        
        //initialize new Gameitem
        //String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack
@@ -72,6 +77,7 @@ public class ReadFiles{
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
        //adding game item to an arraylist making it so that I can put into dlm easier
     }
+            x.close();
             
      } catch (FileNotFoundException ex) {
             Logger.getLogger(ReadFiles.class.getName()).log(Level.SEVERE, null, ex);

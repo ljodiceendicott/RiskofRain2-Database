@@ -20,7 +20,6 @@ public class GameItem {
     ArrayList<Double> stack;
     String imageloc;
     ImageIcon img;
-    
     GameItem(String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack){
        this.rarity = rarity;
        this.name = name;
@@ -67,6 +66,10 @@ public class GameItem {
      */
     public String getEffect() {
         return effect;
+    }
+    @Override 
+    public String toString(){
+        return this.getName();
     }
     
 }

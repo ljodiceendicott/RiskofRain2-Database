@@ -17,7 +17,7 @@ red
 Brilliant#Behemoth
 All your attacks explode!
 All your attacks explode in a 4m (+1.5m per stack) radius for a bonus TOTAL damage to nearby enemies
-0 4 5.5 7 8.5 10 22.5 24 25.5 27
+0 4 5.5 7 8.5 10 22.5 24 25.5 27 28.5
 green
 AtG-Missile#Mk.#1
 Chance to fire a missile
@@ -27,7 +27,7 @@ green
 Will-o'-the#wisp
 Detonate enemies on kill
 On killing an enemy, spawn a lava pillar in a 12m(+2.4m per stack) radius for 350%(+280% per stack)base damage.Stacks linearly
-0 350 630 910 1190 1470 1750 2030 2310 2590
+0 350 630 910 1190 1470 1750 2030 2310 2590 2870
 red
 Ceremonial-Dagger
 Killing an enemy releases homing daggers.",
@@ -167,7 +167,7 @@ white
 Gasoline
 Killing enemies sets nearby enemies on fire.
 Killing an enemy ignites all enemies within 12m(+4m per stack). Enemies burn for 150%(+75% per stack) base damage.
-0 150 225 300 375 450 525 600 675 750
+0 150 225 300 375 450 525 600 675 750 825
 red
 Sentient#Meat#Hook
 Chance to hook all nearby enemies.
@@ -176,7 +176,8 @@ Chance to hook all nearby enemies.
 white
 Bundle#of#Fireworks
 Activating an interactable launches fireworks at nearby enemies.Activating an interactable launches 8 (+4 per stack) fireworks that deal 300% base damage.
-0 8 12 16 20 24 28 32 36 40
+
+0 8 12 16 20 24 28 32 36 40 44
 green
 Bandolier
 Chance on kill to drop an ammo pack that resets all skill cooldowns.
@@ -191,7 +192,7 @@ blue
 Shaped#Glass
 Double your damage... (BUT halve your health).
 Increase base damage by 100%(+100% per stack)Reduce maximum health by 50% of Current Max health(+50% per stack).
-100 50 25 12.5 6.25 3.125 1.5625 .78125 .39 .1953
+100 50 25 12.5 6.25 3.125 1.5625 .78125 .39 .1953 .0977
 blue
 Brittle#Crown
 Gain gold on hit...(BUT lose gold on getting hit).
@@ -211,7 +212,7 @@ red
 Soulbound#Catalyst
 Kills reduce equipment cooldown.
 Kills reduce equipment cooldown by 4s(+2s per stack).
-0 4 6 8 10 12 14 16 18 20
+0 4 6 8 10 12 14 16 18 20 22
 boss
 Titanic#Knurl
 Boosts health and regeneration.
@@ -271,7 +272,7 @@ red
 Dio's#Best#Friend
 Cheat death. Consumed on use.
 Upon death, this item will be consumed and you will return to life with 3 seconds of invulnerability.
-0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0
 red
 Hardlight#Afterburner
 Add 2 extra charges of your Utility skill. Reduce Utility skill cooldown.
@@ -301,7 +302,7 @@ blue
 Gesture#of#the#Drowned
 Dramatically reduce Equipment cooldown... (BUT it automatically activates).
 Reduce Equipment cooldown by 50%(+15% per stack).Forces your Equipment to activate whenever it is off cooldown.
-100 50 35 20 5 0 0 0 0 0
+100 50 35 20 5 0 0 0 0 0 0
 green
 Old#Guillotine
 Instantly kill low health Elite monsters.
@@ -441,12 +442,12 @@ blue
 Defiant#Gouge
 Using a Shrine summons enemies nearby.
 Using a Shrine summons enemies nearby.Scales over time.
-0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0
 blue
 Mercurial#Rachis
 Randomly create a Ward of Power. ALL characters deal bonus damage while in the Ward.
 Creates a Ward of Power in a random location nearby that buffs both enemies and allies within 16m(+50% per stack), causing them to deal +50% damage.",
-0 16 24 36 54 81 121.5 182.25 273.375 410.0625
+0 16 24 36 54 81 121.5 182.25 273.375 410.0625 615.0938
 red
 Defensive#Microbots
 Shoot down nearby projectiles. Recharge rate scales with attack speed.
@@ -456,20 +457,14 @@ other
 Item#Scrap(white,green,red,yellow)
 Does nothing. Prioritized when used with 3D Printers.
 Does nothing. Prioritized when used with 3D Printers.
-0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0
 other
 Tonic#Affliction
 Reduce ALL stats when not under the effects of Spinel Tonic.
 Reduce ALL stats when not under the effects of Spinel Tonic.
-0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0
 other
 Dio's#Best#Friend#(Consumed)
 A spent item with no remaining power.
 A spent item with no remaining power.
-0 0 0 0 0 0 0 0 0 0
-END
-<<<<<<< HEAD
-0 0 0 0 0 0 0 0 0 0
-=======
-0 0 0 0 0 0 0 0 0 0
->>>>>>> 99407ceae144456712b9331b726314710cf5168b
+0 0 0 0 0 0 0 0 0 0 0
