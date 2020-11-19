@@ -7,22 +7,43 @@ package jodicelukeendicott.riskofrain2database;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import javax.swing.DefaultListModel;
+import javax.swing.JToggleButton;
 
 /**
  *
  * @author lukej
  */
 public class GameItemSelectionWin extends javax.swing.JFrame {
-    DefaultListModel<GameItem> dlm;
-     ArrayList<GameItem> al;
+    public DefaultListModel<GameItem> dlm;
+     private ArrayList<GameItem> al;
+     private ArrayList<GameItem> dlmArrayl;
+     /*
+     private ArrayList<GameItem> white;
+     private ArrayList<GameItem> green;
+     private ArrayList<GameItem> red;
+     private ArrayList<GameItem> boss;
+     private ArrayList<GameItem> lunar;
+     private ArrayList<GameItem> other; */
+    public Hashtable<String,ArrayList<GameItem>> directory;
     /**
      * Creates new form GameItemSelectionWin
      */
     public GameItemSelectionWin() {
         dlm = new DefaultListModel<>();
         al = new ArrayList<>();
-        GameItem test;
+        dlmArrayl = new ArrayList<>();
+        /*
+        white = new ArrayList<>();
+        green = new ArrayList<>();
+        red = new ArrayList<>();
+        boss = new ArrayList<>();
+        lunar = new ArrayList<>();
+        other = new ArrayList<>();
+        
+        directory = new Hashtable<>();
+        */
           initComponents();
           try {
             ReadFiles rf = new ReadFiles();
@@ -31,11 +52,36 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
        } catch (FileNotFoundException ex) {
           System.out.println("Error:"+ ex);
        }
+          
           al.forEach(itm -> {
               dlm.addElement(itm);
-        }); //forloop
-        
-        
+                    }); 
+             /* if(itm.getRarity().equals("white")){
+                 white.add(itm);
+             }
+             else if(itm.getRarity().equals("green")){
+                 green.add(itm);
+             }
+             else if(itm.getRarity().equals("red")){
+                 red.add(itm);
+             }
+             else if(itm.getRarity().equals("boss")){
+                 boss.add(itm);
+             }
+             else if(itm.getRarity().equals("blue")){
+                 lunar.add(itm);
+             }
+             else if(itm.getRarity().equals("other")){
+                 other.add(itm);      
+             }
+      //forloop
+        directory.put("white", white);
+        directory.put("green", green);
+        directory.put("red", red);
+        directory.put("boss", boss);
+        directory.put("lunar", lunar);
+        directory.put("other", other);
+          */
     }
 
     /**
@@ -51,15 +97,23 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jList1 = new javax.swing.JList<>();
         jbtngetinfo = new javax.swing.JButton();
         jbtnTglAll = new javax.swing.JToggleButton();
-        jbtnTglWhite = new javax.swing.JToggleButton();
-        jbtnTglGreen = new javax.swing.JToggleButton();
-        jbtnTglRed = new javax.swing.JToggleButton();
-        jbtnTglBoss = new javax.swing.JToggleButton();
-        jbtnTglLunar = new javax.swing.JToggleButton();
+        jbtnTglgreen = new javax.swing.JToggleButton();
+        jbtnTglred = new javax.swing.JToggleButton();
+        jbtnTglwhite = new javax.swing.JToggleButton();
+        jbtnTglboss = new javax.swing.JToggleButton();
+        jbtnTgllunar = new javax.swing.JToggleButton();
+        jbtnTglother = new javax.swing.JToggleButton();
+        jButton1 = new javax.swing.JButton();
+        jlblimg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jList1.setModel(dlm);
+        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList1ValueChanged(evt);
+            }
+        });
         jScrollPane1.setViewportView(jList1);
 
         jbtngetinfo.setText("Get Item Info");
@@ -77,80 +131,114 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
             }
         });
 
-        jbtnTglWhite.setText("White Items");
-        jbtnTglWhite.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTglgreen.setText("Green Items");
+        jbtnTglgreen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTglWhiteActionPerformed(evt);
+                jbtnTglgreenActionPerformed(evt);
             }
         });
 
-        jbtnTglGreen.setText("Green Items");
-        jbtnTglGreen.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTglred.setText("Red Items");
+        jbtnTglred.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTglGreenActionPerformed(evt);
+                jbtnTglredActionPerformed(evt);
             }
         });
 
-        jbtnTglRed.setText("Red Items");
-        jbtnTglRed.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTglwhite.setText("White Items");
+        jbtnTglwhite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTglRedActionPerformed(evt);
+                jbtnTglwhiteActionPerformed(evt);
             }
         });
 
-        jbtnTglBoss.setText("Boss Items");
-        jbtnTglBoss.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTglboss.setText("Boss Items");
+        jbtnTglboss.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTglBossActionPerformed(evt);
+                jbtnTglbossActionPerformed(evt);
             }
         });
 
-        jbtnTglLunar.setText("Lunar Items");
-        jbtnTglLunar.addActionListener(new java.awt.event.ActionListener() {
+        jbtnTgllunar.setText("Lunar Items");
+        jbtnTgllunar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnTglLunarActionPerformed(evt);
+                jbtnTgllunarActionPerformed(evt);
             }
         });
+
+        jbtnTglother.setText("Misc. Items");
+        jbtnTglother.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtnTglotherActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jlblimg.setBackground(new java.awt.Color(255, 255, 255));
+        jlblimg.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 472, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)
+                        .addGap(26, 26, 26))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(114, 114, 114)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbtnTglother, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglWhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglGreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglRed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglBoss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglLunar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
+                    .addComponent(jbtnTglgreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnTglwhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnTglred, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnTglboss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnTgllunar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jlblimg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
                         .addComponent(jbtnTglAll)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglWhite)
+                        .addComponent(jbtnTglwhite)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglGreen)
+                        .addComponent(jbtnTglgreen)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglRed)
+                        .addComponent(jbtnTglred)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbtnTglboss)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglBoss)
+                        .addComponent(jbtnTgllunar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglLunar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                        .addComponent(jbtnTglother)
+                        .addGap(28, 28, 28)
+                        .addComponent(jlblimg, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         pack();
@@ -160,47 +248,85 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbtngetinfoActionPerformed
 
-    private void jbtnTglWhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglWhiteActionPerformed
-        // TODO add your handling code here:
-        if(jbtnTglAll.isSelected()){
-            jbtnTglAll.setSelected(false);
-        }
-       /* dlm.clear();
-        for(int i=0; i>al.size(); i++){
-            if(!al.get(i).getRarity().equals("white")) {
-            dlm.addElement(al.get(i));
-            } }*/
-    }//GEN-LAST:event_jbtnTglWhiteActionPerformed
-
     private void jbtnTglAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglAllActionPerformed
-        jbtnTglWhite.setSelected(false);
-        jbtnTglGreen.setSelected(false);
-        jbtnTglRed.setSelected(false);
-        jbtnTglBoss.setSelected(false);
-        jbtnTglLunar.setSelected(false);
+        
+        dlm.clear();
+        al.forEach(itm -> {
+              dlm.addElement(itm);
+              dlmArrayl.add(itm);
+        });
+        this.fixButtonState(jbtnTglAll);
+        
     }//GEN-LAST:event_jbtnTglAllActionPerformed
 
-    private void jbtnTglGreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglGreenActionPerformed
-        this.disableAllbtn();
-    }//GEN-LAST:event_jbtnTglGreenActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jbtnTglRedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglRedActionPerformed
-        this.disableAllbtn();
-    }//GEN-LAST:event_jbtnTglRedActionPerformed
+    private void jbtnTglwhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglwhiteActionPerformed
+         dlm.clear();
+          this.addtodlm("white");
+          this.fixButtonState(jbtnTglwhite);
+    }//GEN-LAST:event_jbtnTglwhiteActionPerformed
 
-    private void jbtnTglBossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglBossActionPerformed
-        this.disableAllbtn();
-    }//GEN-LAST:event_jbtnTglBossActionPerformed
+    private void jbtnTglgreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglgreenActionPerformed
+    dlm.clear();
+    this.addtodlm("green");
+    this.fixButtonState(jbtnTglgreen);
+    }//GEN-LAST:event_jbtnTglgreenActionPerformed
 
-    private void jbtnTglLunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglLunarActionPerformed
-        this.disableAllbtn();
-    }//GEN-LAST:event_jbtnTglLunarActionPerformed
+    private void jbtnTglredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglredActionPerformed
+    dlm.clear();
+    this.addtodlm("red");
+    this.fixButtonState(jbtnTglred);
+    }//GEN-LAST:event_jbtnTglredActionPerformed
 
-    private void disableAllbtn(){
-             if(jbtnTglAll.isSelected()){
-            jbtnTglAll.setSelected(false);}
+    private void jbtnTglbossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglbossActionPerformed
+    dlm.clear();
+    this.addtodlm("boss");
+    this.fixButtonState(jbtnTglboss);       
+    }//GEN-LAST:event_jbtnTglbossActionPerformed
+
+    private void jbtnTgllunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTgllunarActionPerformed
+    dlm.clear();
+    this.addtodlm("blue");
+    this.fixButtonState(jbtnTgllunar);
+    }//GEN-LAST:event_jbtnTgllunarActionPerformed
+
+    private void jbtnTglotherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglotherActionPerformed
+    dlm.clear();
+    this.addtodlm("other");
+    this.fixButtonState(jbtnTglother);
+    }//GEN-LAST:event_jbtnTglotherActionPerformed
+
+    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+       //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ror2mainwinimg.png"))); 
+    }//GEN-LAST:event_jList1ValueChanged
+
+    private void addtodlm(String type){
+        if(jbtnTglAll.isSelected()){
+        dlm.clear();
+        jbtnTglAll.setSelected(false);
+        jbtnTglAll.setEnabled(true);
+        }
+        al.forEach(itm-> {
+         if(itm.getRarity().equals(type)){
+             dlm.addElement(itm);
+             dlmArrayl.add(itm);
+         }
+    });
     }
-    /**
+    private void fixButtonState(JToggleButton b){
+        jbtnTglAll.setSelected(false);
+        jbtnTglboss.setSelected(false);
+        jbtnTglwhite.setSelected(false);
+        jbtnTglgreen.setSelected(false);
+        jbtnTglred.setSelected(false);
+        jbtnTgllunar.setSelected(false);
+        jbtnTglother.setSelected(false);
+        b.setSelected(true);
+    }
+     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -236,14 +362,17 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JList<GameItem> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jbtnTglAll;
-    private javax.swing.JToggleButton jbtnTglBoss;
-    private javax.swing.JToggleButton jbtnTglGreen;
-    private javax.swing.JToggleButton jbtnTglLunar;
-    private javax.swing.JToggleButton jbtnTglRed;
-    private javax.swing.JToggleButton jbtnTglWhite;
+    private javax.swing.JToggleButton jbtnTglboss;
+    private javax.swing.JToggleButton jbtnTglgreen;
+    private javax.swing.JToggleButton jbtnTgllunar;
+    private javax.swing.JToggleButton jbtnTglother;
+    private javax.swing.JToggleButton jbtnTglred;
+    private javax.swing.JToggleButton jbtnTglwhite;
     private javax.swing.JButton jbtngetinfo;
+    private javax.swing.JLabel jlblimg;
     // End of variables declaration//GEN-END:variables
 }

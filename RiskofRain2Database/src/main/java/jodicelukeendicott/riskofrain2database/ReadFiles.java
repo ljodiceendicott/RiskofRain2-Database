@@ -73,7 +73,6 @@ public class ReadFiles{
          alGameItem.add(itm);
          
        }
-        
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
        //adding game item to an arraylist making it so that I can put into dlm easier
     }
