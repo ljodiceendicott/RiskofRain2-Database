@@ -18,8 +18,8 @@ public class GameItem {
     private String pickuptext;
     private String effect;
     ArrayList<Double> stack;
-    String imageloc;
-    ImageIcon img;
+   // String imageloc;
+    //ImageIcon img;
     GameItem(String rarity, String name, String pickuptext, String effect, ArrayList<Double> stack){
        this.rarity = rarity;
        this.name = name;
@@ -36,9 +36,9 @@ public class GameItem {
        this.pickuptext = pickuptext;
        this.effect = effect;
     }
-    public ImageIcon getIcon(){
-        return img;
-    }
+   // public ImageIcon getIcon(){
+     //   return img;
+  //  }
 
     /**
      * @return the rarity
@@ -70,6 +70,9 @@ public class GameItem {
     @Override 
     public String toString(){
         return this.getName();
+    }
+    public double getstack(int i){
+        return stack.get(i); 
     }
     
 }

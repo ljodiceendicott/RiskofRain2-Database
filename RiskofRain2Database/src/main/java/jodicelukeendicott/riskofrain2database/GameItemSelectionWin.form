@@ -27,8 +27,8 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="444" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" pref="474" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
@@ -38,16 +38,24 @@
                       <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jbtnTglother" max="32767" attributes="0"/>
-                  <Component id="jbtnTglAll" max="32767" attributes="0"/>
-                  <Component id="jbtnTglgreen" pref="100" max="32767" attributes="0"/>
-                  <Component id="jbtnTglwhite" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jbtnTglred" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jbtnTglboss" max="32767" attributes="0"/>
-                  <Component id="jbtnTgllunar" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jbtnTglother" max="32767" attributes="0"/>
+                          <Component id="jbtnTglAll" max="32767" attributes="0"/>
+                          <Component id="jbtnTglgreen" pref="100" max="32767" attributes="0"/>
+                          <Component id="jbtnTglwhite" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnTglred" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jbtnTglboss" max="32767" attributes="0"/>
+                          <Component id="jbtnTgllunar" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="jLabel1" min="-2" pref="120" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,6 +71,7 @@
                           <Component id="jButton1" alignment="3" min="-2" pref="46" max="-2" attributes="0"/>
                           <Component id="jbtngetinfo" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -79,9 +88,11 @@
                       <Component id="jbtnTgllunar" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jbtnTglother" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jLabel1" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -181,6 +192,8 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
     </Component>
   </SubComponents>
 </Form>
