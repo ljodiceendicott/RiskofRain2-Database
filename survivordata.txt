@@ -1,0 +1,95 @@
+Commando
+N/A
+Commando is the only survivor unlocked at the start of the game
+0 armor
+7 speed
+110 (+33 per level) health
+1/s (+0.2 per level) health regen
+12 (+2.4 per level) damage
+primary
+0
+Double Tap
+shoot twice for 2x90% damage
+secondary
+3
+Phase Round
+Fire a piercing Bullet that hits all enemies in a line for 230% damage
+utility
+4
+Tactical Drive
+Roll a short distance
+Special
+9
+Suppressive Fire
+Fire rapidly, stunning enemies for 100% damage per shot. Fires more shots based on attack speed, with default six.
+Huntress
+N/A
+Huntress is unlocked by completing the challenge WARRIOR(Reach and complete the 3rd Teleporter event without dying)
+0
+7
+90 (+27 per level)
+1/s (.2 per level)
+12 (+2.4 per level)
+primary
+0
+Strafe
+Fire a seeking arrow for 150% damage. Can be used while sprinting.
+secondary
+7
+Laser Glaive
+Throw a seeking glaive that bounces up to 6 times for 250% damage. Damage increases by 10% per bounce.
+utility
+7
+Blink
+Disappear and teleport forward.
+Special
+17
+Arrow Rain
+Teleport into the sky. Target an area to rain down arrows, slowing all enemies and dealing 225% damage per second
+MUL-T
+MUL-T can hold two equipment at once. The active equipment is swapped by using Retool(2s cooldown).
+MUL-T is unlocked upon completing the Challenge "Verified". (Complete the first Teleporter event 5 times.)
+12
+7
+200 (+60 per level)
+1/s (+0.2 per level)
+11 (+2.2 per level)
+primary
+0
+Auto-Nailgun
+Rapidly fire nails for 60% damage. Fires six nails when initially pressed.
+primary
+0
+Rebar Puncher
+Fire a piercing rebar that deals 600% damage.
+secondary
+6
+Blast Canister
+Launch a stun canister for 220% damage. Drops stun bomblets for 5x44% damage.
+utility
+8
+Transport Mode
+Zoom forward, gaining armor and speed. Deals 250% damage to enemies in the way. Deals more damage at higher speeds.
+Engineer
+The Engineer is unlocked upon completing the Challenge "Engineering Perfection" (Complete 30 stages.)
+0
+7
+130 (+39 per level)
+1/s (+0.2 per level)
+14 (+2.8 per level)
+primary
+0
+Bouncing Grenades
+Charge up to 8 grenades that deal 100% damage each.
+secondary
+8
+Pressure Mines
+Place a two-stage mine that deals 300% damage when an enemy walks nearby, or 900% damage if allowed to fully arm. Can place up to 4.
+utility
+25
+Bubble Shield
+Place an impenetrable shield that blocks all incoming damage.
+special
+30
+TR12 Gauss Auto-Turret
+Place a turret that inherits all your items. Fires a cannon for 100% damage. Can place up to 2.(Health 130 +39 per level)(Health Regen 1.5/s +0.3 per level)(Damage 16 +3.2 per level)

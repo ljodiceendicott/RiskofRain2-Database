@@ -29,8 +29,11 @@ public class ReadFiles{
     public ArrayList<GameItem> readItemFile(){
   //fix readin file, can not find file specified
   //should try reading in file using other methods.
-        File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt");
-    
+   //    File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt");
+   //C:\Users\lukej\Desktop\risk of rain 2 database\RiskofRain2Database\src\main\java\jodicelukeendicott\riskofrain2database
+        File text = new File("..\\..\\resources\\formatedROR2data.txt");
+//would like to make it a relative path rather than the absoulue path     
+// File text= new File("formatedROR2data.txt");
     String pickupdescr = null;   
     Scanner x;
      alGameItem = new ArrayList<GameItem>();

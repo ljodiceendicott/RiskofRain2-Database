@@ -27,6 +27,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
      private ArrayList<GameItem> lunar;
      private ArrayList<GameItem> other; */
     public Hashtable<String,ArrayList<GameItem>> directory;
+    int idx = -1;
     /**
      * Creates new form GameItemSelectionWin
      */
@@ -104,7 +105,6 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jbtnTgllunar = new javax.swing.JToggleButton();
         jbtnTglother = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
-        jlblimg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,9 +180,6 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
             }
         });
 
-        jlblimg.setBackground(new java.awt.Color(255, 255, 255));
-        jlblimg.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -191,8 +188,8 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jScrollPane1)
-                        .addGap(26, 26, 26))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 444, Short.MAX_VALUE)
+                        .addGap(17, 17, 17))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,12 +199,11 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jbtnTglother, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglAll, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTglgreen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbtnTglgreen, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                     .addComponent(jbtnTglwhite, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglred, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbtnTglboss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbtnTgllunar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlblimg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbtnTgllunar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(21, 21, 21))
         );
         layout.setVerticalGroup(
@@ -235,17 +231,15 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jbtnTgllunar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jbtnTglother)
-                        .addGap(28, 28, 28)
-                        .addComponent(jlblimg, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(33, Short.MAX_VALUE))
+                        .addComponent(jbtnTglother)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbtngetinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtngetinfoActionPerformed
-        // TODO add your handling code here:
+       GameItemWin giw = new GameItemWin();
     }//GEN-LAST:event_jbtngetinfoActionPerformed
 
     private void jbtnTglAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglAllActionPerformed
@@ -300,7 +294,10 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnTglotherActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-       //jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ror2mainwinimg.png"))); 
+   if(!jList1.isSelectionEmpty()){
+       idx =jList1.getSelectedIndex();
+     
+   }
     }//GEN-LAST:event_jList1ValueChanged
 
     private void addtodlm(String type){
@@ -373,6 +370,5 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     private javax.swing.JToggleButton jbtnTglred;
     private javax.swing.JToggleButton jbtnTglwhite;
     private javax.swing.JButton jbtngetinfo;
-    private javax.swing.JLabel jlblimg;
     // End of variables declaration//GEN-END:variables
 }
