@@ -8,6 +8,8 @@ package jodicelukeendicott.riskofrain2database;
 import com.google.gson.Gson;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.URL;
+import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -29,7 +31,6 @@ public class ReadFiles{
        
         //this.readEntityFile();
     }
-    
     public ArrayList<GameItem> readItemtxtFile(){
   //fix readin file, can not find file specified
   //should try reading in file using other methods.
@@ -37,11 +38,8 @@ public class ReadFiles{
    //C:\Users\lukej\Desktop\risk of rain 2 database\RiskofRain2Database\src\main\java\jodicelukeendicott\riskofrain2database
   //"C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\survivordataformated.txt
   
-  File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt");
-  
-    //File text = new File("..\\..\\resources\\formatedROR2data.txt");
-//would like to make it a relative path rather than the absoulue path     
-// File text= new File("formatedROR2data.txt");
+  File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt"); 
+//would like to make it a relative path rather than the absoulue path    
     String pickupdescr = null;   
     Scanner x;
      alGameItem = new ArrayList<GameItem>();
