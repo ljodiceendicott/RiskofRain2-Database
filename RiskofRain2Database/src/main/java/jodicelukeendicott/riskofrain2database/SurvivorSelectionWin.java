@@ -5,17 +5,32 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author lukej
  */
 public class SurvivorSelectionWin extends javax.swing.JFrame {
 
+    DefaultListModel dlm;
+    ArrayList<Survivor>sl;
     /**
      * Creates new form SurvivorSelectionWin
      */
     public SurvivorSelectionWin() {
+        dlm = new DefaultListModel();
+        sl = new ArrayList<>();
+        
         initComponents();
+        try{
+            ReadFiles rf = new ReadFiles();
+            sl = rf.readSurvivortxtFile();
+        } catch (FileNotFoundException ex) {
+          System.out.println("Error:"+ex);
+        }
     }
 
     /**

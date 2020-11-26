@@ -1,11 +1,11 @@
 Commando
 N/A
 Commando is the only survivor unlocked at the start of the game
-0 armor
-7 speed
-110 (+33 per level) health
-1/s (+0.2 per level) health regen
-12 (+2.4 per level) damage
+0
+7
+110 (+33 per level)
+1/s (+0.2 per level)
+12 (+2.4 per level)
 primary
 0
 Double Tap

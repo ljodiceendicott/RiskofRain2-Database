@@ -12,10 +12,10 @@ package jodicelukeendicott.riskofrain2database;
 public class Ability {
   private String name;
   private String loadoutSlot;
-  private Double coolDown;
+  private String coolDown;
   private String Description;
    
-   Ability(String name, String los, Double cd, String desc){
+   Ability(String name, String los, String cd, String desc){
        this.name= name;
        this.loadoutSlot= los;
        this.Description= desc;
@@ -31,7 +31,7 @@ public class Ability {
    public String getDescrp(){
        return Description;
    }
-   public Double getCD(){
+   public String getCD(){
        return coolDown;
    }
    

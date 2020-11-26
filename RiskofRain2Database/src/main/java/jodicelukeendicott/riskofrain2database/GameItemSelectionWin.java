@@ -27,7 +27,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
      private ArrayList<GameItem> boss;
      private ArrayList<GameItem> lunar;
      private ArrayList<GameItem> other; */
-    public Hashtable<String,ArrayList<GameItem>> directory;
+  //  public Hashtable<String,ArrayList<GameItem>> directory;
     int idx = -1;
     /**
      * Creates new form GameItemSelectionWin

@@ -92,42 +92,64 @@ public class ReadFiles{
         }
     return alGameItem;
 }
-    public void readSurvivortxtFile() throws FileNotFoundException{
+    public ArrayList<Survivor> readSurvivortxtFile() throws FileNotFoundException{
         File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\survivordataformated.txt");
+        alSurvivor = new ArrayList<>();
+        /*
         try {
             x = new Scanner(text); 
             while(x.hasNext()){
+         tempabil = new ArrayList<>();
          String name = x.nextLine();
          String passive = x.nextLine();
          String unlock = x.nextLine();
-         int armor = x.nextInt();
-         int speed = x.nextInt();
+         String armor = x.nextLine();
+         String speed = x.nextLine();
          String health= x.nextLine();
          String healthregen = x.nextLine();
          String damage = x.nextLine();
-         tempabil = new ArrayList<>();
-         for(int i=0; i<4; i++){
-               String abilityuse= x.nextLine();
-               double cooldown = x.nextDouble();
-               String abilityname= x.nextLine();
-               String abilitydescrip= x.nextLine();
-               Ability ab = new Ability(abilityname, abilityuse,cooldown , abilitydescrip);
-               tempabil.add(ab);
-            }
+         
+         String abilityuseprim= x.nextLine();
+         String cooldownprim = x.nextLine();
+         String abilitynameprim= x.nextLine();
+         String abilitydescripprim= x.nextLine();
+         Ability primab = new Ability(abilitynameprim, abilityuseprim ,cooldownprim , abilitydescripprim);
+         tempabil.add(primab);
+               
+         String abilityusesec= x.nextLine();
+         String cooldownsec = x.nextLine();
+         String abilitynamesec= x.nextLine();
+         String abilitydescripsec= x.nextLine();
+         Ability secab = new Ability(abilitynamesec, abilityusesec ,cooldownsec , abilitydescripsec); 
+         tempabil.add(secab);
+               
+         String abilityuseutl= x.nextLine();
+         String abilcooldown = x.nextLine();
+         String abilitynameutl= x.nextLine();
+         String abilitydescriputl= x.nextLine();
+         Ability utlab = new Ability(abilitynameutl, abilityuseutl ,abilcooldown , abilitydescriputl);
+         tempabil.add(utlab);
+               
+         String abilityusespec= x.nextLine();
+         String cooldownspec = x.nextLine();
+         String abilitynamespec= x.nextLine();
+         String abilitydescripspec= x.nextLine();
+         Ability specab = new Ability(abilitynamespec, abilityusespec ,cooldownspec , abilitydescripspec);
+         tempabil.add(specab);
        //Survivor(String name, String pass, String unlock, int armor, int speed, String health, String healre, String damage, ArrayList<Ability>lo)
-       Survivor s = new Survivor(name,passive,unlock,armor,speed,health,healthregen,damage,tempabil);
-       alSurvivor.add(s);
+  //     Survivor s = new Survivor(name,passive,unlock,armor,speed,health,healthregen,damage,tempabil);
+    //   alSurvivor.add(s);
             }
-       
-       
-      //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
-       //adding game item to an arraylist making it so that I can put into dlm easier
-            x.close();
+           
+        x.close();
             
      } catch (FileNotFoundException ex) {
             Logger.getLogger(ReadFiles.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+     return alSurvivor;
     }
+        */
     //READ IN PLAYERS/ENEMIES
      public void itemstoJson(){
      //this will need the buffer then this will be the loop
