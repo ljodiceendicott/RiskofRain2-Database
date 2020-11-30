@@ -2,7 +2,7 @@ Commando
 N/A
 Commando is the only survivor unlocked at the start of the game
 0
-7
+7 m/s
 110 (+33 per level)
 1/s (+0.2 per level)
 12 (+2.4 per level)
@@ -11,22 +11,22 @@ primary
 Double Tap
 shoot twice for 2x90% damage
 secondary
-3
+3s
 Phase Round
 Fire a piercing Bullet that hits all enemies in a line for 230% damage
 utility
-4
+4s
 Tactical Drive
 Roll a short distance
 Special
-9
+9s
 Suppressive Fire
 Fire rapidly, stunning enemies for 100% damage per shot. Fires more shots based on attack speed, with default six.
 Huntress
 N/A
 Huntress is unlocked by completing the challenge WARRIOR(Reach and complete the 3rd Teleporter event without dying)
 0
-7
+7 m/s
 90 (+27 per level)
 1/s (.2 per level)
 12 (+2.4 per level)
@@ -35,22 +35,22 @@ primary
 Strafe
 Fire a seeking arrow for 150% damage. Can be used while sprinting.
 secondary
-7
+7s
 Laser Glaive
 Throw a seeking glaive that bounces up to 6 times for 250% damage. Damage increases by 10% per bounce.
 utility
-7
+7s
 Blink
 Disappear and teleport forward.
 Special
-17
+17s
 Arrow Rain
 Teleport into the sky. Target an area to rain down arrows, slowing all enemies and dealing 225% damage per second
 MUL-T
 MUL-T can hold two equipment at once. The active equipment is swapped by using Retool(2s cooldown).
 MUL-T is unlocked upon completing the Challenge "Verified". (Complete the first Teleporter event 5 times.)
 12
-7
+7m/s
 200 (+60 per level)
 1/s (+0.2 per level)
 11 (+2.2 per level)
@@ -63,18 +63,18 @@ primary
 Rebar Puncher
 Fire a piercing rebar that deals 600% damage.
 secondary
-6
+6s
 Blast Canister
 Launch a stun canister for 220% damage. Drops stun bomblets for 5x44% damage.
 utility
-8
+8s
 Transport Mode
 Zoom forward, gaining armor and speed. Deals 250% damage to enemies in the way. Deals more damage at higher speeds.
 Engineer
 N/A
 The Engineer is unlocked upon completing the Challenge "Engineering Perfection" (Complete 30 stages.)
 0
-7
+7 m/s
 130 (+39 per level)
 1/s (+0.2 per level)
 14 (+2.8 per level)
@@ -83,22 +83,22 @@ primary
 Bouncing Grenades
 Charge up to 8 grenades that deal 100% damage each.
 secondary
-8
+8s
 Pressure Mines
 Place a two-stage mine that deals 300% damage when an enemy walks nearby, or 900% damage if allowed to fully arm. Can place up to 4.
 utility
-25
+25s
 Bubble Shield
 Place an impenetrable shield that blocks all incoming damage.
 special
-30
+30s
 TR12 Gauss Auto-Turret
 Place a turret that inherits all your items. Fires a cannon for 100% damage. Can place up to 2.(Health 130 +39 per level)(Health Regen 1.5/s +0.3 per level)(Damage 16 +3.2 per level)
 Acrid
 Poison:Certain attacks Poison enemies, dealing damage equal to 10% of their maximum health over time. Poison cannot kill enemies.
 Under the Bazaar in the Bazaar Between Time there is a hidden cave that leads to a purple portal. This portal leads to the Void Fields. Beating the nine challenge cells in the Void Fields will unlock Acrid.
 20
-7
+7 m/s
 160(+48 per level)
 2.5/s (+0.5 per level)
 15 (+3 per level)
@@ -107,46 +107,46 @@ primary
 Vicious Wounds
 Maul an enemy for 200% damage. Every 3rd hit deals 400% damage.
 Secondary
-2
+2s
 Neurotoxin
 Spit toxic bile for 240% damage that poisons enemies hit.
 utility
-6
+6s
 Caustic Leap
 Leap into the air, dealing 320% damage, stunning, and poisoning enemies on impact. Leaves a pool of acid that deals 25% damage.
 special
-10
+10s
 Epidemic
 Release a deadly poison that deals 100% damage and poisons enemies. The disease continually spreads to up to 20 targets.
 Artificer
 ENV Suit:Holding the Jump key causes the Artificer to hover in the air.
 The Artificer is unlocked upon completing the Challenge "Pause". Collect 11 Lunar Coins
 0
-7
+7 m/s
 110 (+33 per level)
 1/s (+0.2 per level)
 12 (+2.4 per level)
 primary
-1.3
+1.3s
 Flame Bolt
 Fire a bolt for 220% damage that ignites enemies. Hold up to 4.Burns 8 ticks for 25% damage each
 secondary
-5
+5s
 Charged Nano-Bomb
 Charge up a nano-bomb that deals 400%-1200% damage and stuns all enemies.
 utility
-12
+12s
 Snapefreeze
 Create a barrier that freezes enemies for 100% damage. Enemies at low health are instantly killed if frozen.
 special
-5
+5s
 Flamethrower
 Burn all enemies in front of you for 1700% damage.
 Loader
 Scrap Barrier:The Loader is immune to fall damage. Striking enemies with the Loader's gauntlets grants a temporary barrier.This barrier gain is 5% of the max barrier.
-Loader is unlocked upon completing the challenge "Guidance Offline". (Destroy five of the egg nests in Siren's Call, then defeat the spawned boss.) 
+Loader is unlocked upon completing the challenge "Guidance Offline". (Destroy five of the egg nests in Siren's Call, then defeat the spawned boss.)
 20
-7
+7 m/s
 160 (+48 per level)
 2.5/s (+0.5 per level)
 12 (+2.4 per level)
@@ -155,15 +155,15 @@ primary
 Knuckleboom
 Swing at nearby enemies for 320% damage.
 secondary
-5
+5s
 Grapple Fist
 Fire your gauntlet forward, pulling you to the target.
 utility
-5
+5s
 Charged Gauntlet
 Charge up a massive punch for 600%-2700% damage that sends you flying forward. Deals significantly more damage the faster you are moving.
 special
-20
+20s
 M551 Pylon
 Throw a floating pylon that zaps up to 6 nearby enemies for 100% damage. Can be grappled.
 Mercenary
@@ -179,22 +179,22 @@ primary
 Laser Sword
 Slice in front for 130% damage. Every 3rd hit strikes in a greater area for 300% damage.
 secondary
-2.5
+2.5s
 Whirlwind
 Quickly slice horizontally twice, dealing 2x200% damage. If airbone, slice vertically instead.
 utility
-7
+7s
 Blinding Assault
 Dash forward, stunning enemies for 200% damage. If you hit an enemy, you can dash again, up to 3 total.
 special
-6
+6s
 Eviscerate
 Target the nearest enemy, attacking them for 110% damage repeatedly. You cannot be hit for the duration.
 Rex
 Natural Toxins:Certain attacks Weaken, reducing movement speed, armor, and damage.
 REX is unlocked by completing the challenge "Power Plant". (Repair the broken robot with an Escape Pod's Fuel Array.)
 20
-7
+7 m/s
 130 (+39 per level)
 1/s (+0.2 per level)
 12 (+2.4 per level)
@@ -207,10 +207,10 @@ secondary
 Seed Barrage
 Costs 15% of your current health. Launch a mortar into the sky for 450% damage.
 utility
-5
+5s
 DIRECTIVE: Disperse
 Fire a sonic boom that pushes and Weakens all enemies hit. Pushes you backwards if you are airborne.
 special
-12
+12s
 Tangling Growth
 Costs 25% of your current health. Fire a flower that roots for 200% damage. Heals for every target hit.

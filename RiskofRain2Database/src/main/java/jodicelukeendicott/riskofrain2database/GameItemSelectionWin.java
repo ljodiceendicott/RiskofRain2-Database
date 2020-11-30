@@ -7,7 +7,6 @@ package jodicelukeendicott.riskofrain2database;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
@@ -112,6 +111,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Item Selection");
 
         jList1.setModel(dlm);
         jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -253,7 +253,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
 
     private void jbtngetinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtngetinfoActionPerformed
        if(idx>-1){
-   GameItemWin giw = new GameItemWin(dlmArrayl.get(idx));
+   GameItemWin giw = new GameItemWin(dlm.get(idx));
    giw.setVisible(true);
        }
        else{

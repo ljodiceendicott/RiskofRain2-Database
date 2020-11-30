@@ -96,11 +96,8 @@ public class Survivor {
         return damage;
     }
 
-    /**
-     * @return the loadout
-     */
-    public ArrayList<Ability> getLoadout() {
-        return loadout;
-    }
+   public Ability getAbility(int idx){
+       return loadout.get(idx);
+   }
     
 }

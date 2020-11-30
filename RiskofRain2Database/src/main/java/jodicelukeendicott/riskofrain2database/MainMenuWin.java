@@ -41,6 +41,7 @@ public class MainMenuWin extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Risk of Rain 2 Database By Luke Jodice");
 
         jbtnItems.setText("Items");
         jbtnItems.addActionListener(new java.awt.event.ActionListener() {
