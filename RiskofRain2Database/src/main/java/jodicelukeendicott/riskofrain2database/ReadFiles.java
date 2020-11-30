@@ -38,13 +38,17 @@ public class ReadFiles{
    //C:\Users\lukej\Desktop\risk of rain 2 database\RiskofRain2Database\src\main\java\jodicelukeendicott\riskofrain2database
   //"C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\survivordataformated.txt
   
-  File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt"); 
+//  File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\formatedROR2data.txt"); 
+  
+//should  be the relative path
+ File itmtxt = new File(getClass().getResource("/formatedROR2data.txt").getFile()); 
+// File text= new File("..\\..\\resources\\formatedROR2data.txt");
 //would like to make it a relative path rather than the absoulue path    
     String pickupdescr = null;   
     Scanner x;
      alGameItem = new ArrayList<GameItem>();
         try {
-            x = new Scanner(text); 
+            x = new Scanner(itmtxt); 
             while(x.hasNext()){
        String itemType= x.next();
        String nameuned= x.next();
@@ -93,11 +97,14 @@ public class ReadFiles{
     return alGameItem;
 }
     public ArrayList<Survivor> readSurvivortxtFile() throws FileNotFoundException{
-        File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\survivordataformated.txt");
+        //File text= new File("C:\\Users\\lukej\\Desktop\\risk of rain 2 database\\RiskofRain2Database\\src\\main\\resources\\survivordataformated.txt");
+        File survtxt = new File(getClass().getResource("/survivordataformated.txt").getFile()); 
         alSurvivor = new ArrayList<>();
-        /*
+       
+    
+      
         try {
-            x = new Scanner(text); 
+            x = new Scanner(survtxt); 
             while(x.hasNext()){
          tempabil = new ArrayList<>();
          String name = x.nextLine();
@@ -136,9 +143,9 @@ public class ReadFiles{
          String abilitydescripspec= x.nextLine();
          Ability specab = new Ability(abilitynamespec, abilityusespec ,cooldownspec , abilitydescripspec);
          tempabil.add(specab);
-       //Survivor(String name, String pass, String unlock, int armor, int speed, String health, String healre, String damage, ArrayList<Ability>lo)
-  //     Survivor s = new Survivor(name,passive,unlock,armor,speed,health,healthregen,damage,tempabil);
-    //   alSurvivor.add(s);
+    //  Survivor(String name, String pass, String unlock, int armor, int speed, String health, String healre, String damage, ArrayList<Ability>lo)
+          Survivor s = new Survivor(name,passive,unlock,armor,speed,health,healthregen,damage,tempabil);
+     alSurvivor.add(s);
             }
            
         x.close();
@@ -148,17 +155,17 @@ public class ReadFiles{
         }
         
      return alSurvivor;
-    }
-        */
+    } 
     //READ IN PLAYERS/ENEMIES
-     public void itemstoJson(){
+    /*
+    public void itemstoJson(){
      //this will need the buffer then this will be the loop
          /*
         alGameItem.forEach(itm -> {
               
                     }); 
-        */
-     }
+        
+     }*/
     }
    
 

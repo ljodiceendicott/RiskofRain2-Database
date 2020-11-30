@@ -71,6 +71,7 @@ utility
 Transport Mode
 Zoom forward, gaining armor and speed. Deals 250% damage to enemies in the way. Deals more damage at higher speeds.
 Engineer
+N/A
 The Engineer is unlocked upon completing the Challenge "Engineering Perfection" (Complete 30 stages.)
 0
 7
@@ -167,6 +168,12 @@ M551 Pylon
 Throw a floating pylon that zaps up to 6 nearby enemies for 100% damage. Can be grappled.
 Mercenary
 Cybernetic Enhancements:The Mercenary can jump twice.
+The Mercenary is unlocked upon completing the Challenge "True Respite". (Obliterate yourself at the Obelisk.)
+20
+7 m/s
+140 (+42 per level)
+2.5/s (+0.5 per level)
+12 (+2.4 per level)
 primary
 0
 Laser Sword

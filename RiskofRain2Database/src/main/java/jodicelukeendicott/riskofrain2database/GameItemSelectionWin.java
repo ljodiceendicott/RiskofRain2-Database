@@ -11,6 +11,7 @@ import java.util.Hashtable;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
+import static jodicelukeendicott.riskofrain2database.Main.mmw;
 
 /**
  *
@@ -58,6 +59,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
           
           al.forEach(itm -> {
               dlm.addElement(itm);
+              dlmArrayl.add(itm);
                     }); 
              /* if(itm.getRarity().equals("white")){
                  white.add(itm);
@@ -106,7 +108,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jbtnTglboss = new javax.swing.JToggleButton();
         jbtnTgllunar = new javax.swing.JToggleButton();
         jbtnTglother = new javax.swing.JToggleButton();
-        jButton1 = new javax.swing.JButton();
+        btnback = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -176,10 +178,10 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnback.setText("Back to Menu");
+        btnback.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnbackActionPerformed(evt);
             }
         });
 
@@ -197,7 +199,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                         .addGap(56, 56, 56)
                         .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(114, 114, 114)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(51, 51, 51)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -223,7 +225,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(43, 43, 43)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnback, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jbtngetinfo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -251,7 +253,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
 
     private void jbtngetinfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtngetinfoActionPerformed
        if(idx>-1){
-   GameItemWin giw = new GameItemWin(al.get(idx));
+   GameItemWin giw = new GameItemWin(dlmArrayl.get(idx));
    giw.setVisible(true);
        }
        else{
@@ -262,17 +264,17 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     private void jbtnTglAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglAllActionPerformed
         
         dlm.clear();
-        al.forEach(itm -> {
+        dlmArrayl.forEach(itm -> {
               dlm.addElement(itm);
-              dlmArrayl.add(itm);
         });
         this.fixButtonState(jbtnTglAll);
         
     }//GEN-LAST:event_jbtnTglAllActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btnbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnbackActionPerformed
+        mmw.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnbackActionPerformed
 
     private void jbtnTglwhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglwhiteActionPerformed
          dlm.clear();
@@ -339,6 +341,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jbtnTgllunar.setSelected(false);
         jbtnTglother.setSelected(false);
         b.setSelected(true);
+        
     }
      /**
      * @param args the command line arguments
@@ -376,7 +379,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<GameItem> jList1;
     private javax.swing.JScrollPane jScrollPane1;

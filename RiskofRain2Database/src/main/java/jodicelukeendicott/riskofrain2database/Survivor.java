@@ -12,15 +12,15 @@ import java.util.ArrayList;
  * @author lukej
  */
 public class Survivor {
-    String name;
-    String passive;
-    String unlocking;
-    String armor;
-    String speed;
-    String health;
-    String healthregen;
-    String damage;
-    ArrayList<Ability> loadout;
+    private String name;
+    private String passive;
+    private String unlocking;
+    private String armor;
+    private String speed;
+    private String health;
+    private String healthregen;
+    private String damage;
+    private ArrayList<Ability> loadout;
     
     Survivor(String name, String pass, String unlock, String armor, String speed, String health, String healre, String damage, ArrayList<Ability>lo){
         this.name= name;
@@ -34,4 +34,73 @@ public class Survivor {
         loadout = new ArrayList<>();
         this.loadout = lo;
     }
+    
+    @Override
+    public String toString() {
+        return this.getName();
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @return the passive
+     */
+    public String getPassive() {
+        return passive;
+    }
+
+    /**
+     * @return the unlocking
+     */
+    public String getUnlocking() {
+        return unlocking;
+    }
+
+    /**
+     * @return the armor
+     */
+    public String getArmor() {
+        return armor;
+    }
+
+    /**
+     * @return the speed
+     */
+    public String getSpeed() {
+        return speed;
+    }
+
+    /**
+     * @return the health
+     */
+    public String getHealth() {
+        return health;
+    }
+
+    /**
+     * @return the healthregen
+     */
+    public String getHealthregen() {
+        return healthregen;
+    }
+
+    /**
+     * @return the damage
+     */
+    public String getDamage() {
+        return damage;
+    }
+
+    /**
+     * @return the loadout
+     */
+    public ArrayList<Ability> getLoadout() {
+        return loadout;
+    }
+    
 }

@@ -53,8 +53,6 @@ public class GameItemWin extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         jlblitmName.setFont(new java.awt.Font("Terminator Two", 0, 36)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Terminator Two", 0, 14)); // NOI18N
