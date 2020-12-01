@@ -1,0 +1,336 @@
+small
+Beetle
+80 (+24 per level)
+0
+12 (+2.4 per level)
+6 m/s
+0
+Beetles spawns into the world by digging itself out of the ground, usually in numbers due to being the cheapest enemy Directors can spawn.
+A Beetle's only attack is a simple headbutt which deals 200% damage
+This attack can be easily avoided just by moving away from the Beetle.
+small
+Hermit Crab
+100 (+45 per level)
+1.5/s (+0.3 per level)
+4 (+0.8 per level)
+10 m/s
+0
+Hermit Crabs initially spawn a distance away from the player(s), so to not be harmless and easily taken care of when spawned in.
+Hermit Crabs only skill is to bury itself into the ground.[1] While in this buried state, the Hermit Crab will proceed to passively launch 3 boulders at the targeted area, each dealing 400% damage
+If you kill 20 Hermit crabs by chasing them off the edge of the map you unlock the Achievement The Demons and The Crabs getting the item: Gesture of the Drowned
+small
+Imp
+200 (+75 per level)
+0.6 (+0.12 per level) hp/s
+10 (+2 per level)
+10 m/s
+0
+The Imp slashes twice in front of him, dealing 150% damage each and inflicts bleeding for 5 ticks, each dealing 20% damage.
+The Imp can teleport a short distance in quick succession, which takes it to the farthest/nearest surface that it is facing at.
+This enemy is very similar to its Boss varient Imp Overlord, If not taken care of, the bleed ticks from getting hit will end the run.
+small
+Jellyfish
+60 (+18 per level)
+0
+5 (+1 per level)
+10 m/s
+0
+Jellyfishes spawn on the outskirts of an Environment and typically wait inplace. Once they spot a player, they then proceed to fly towards that player in a typical swimming motion.
+When the Jellyfish comes close enough, they then prepare to explode into a ball of electricity, dealing at most 1000% damage.However, this attack can be canceled by attacking it.
+With the Jellyfish having such low health it is best to avoid them and if you see them coming toward you to kill them before they explode becasue the damage from explosion is dangerous
+small
+Lemurian
+80 (+24 per level)
+0
+12 (+2.4 per level)
+7 m/s
+0
+Lemurians attack by spitting fireballs at the player, which deals 100% damage on impact.
+If the distance between the Lemurian and the player drops below 10m, the Lemurian stops spitting fireballs, run straight toward the player and proceed to do a melee slash, dealing 200% damage.
+This enemy is one of the easiest enemies to kill but its different elemental variants are the ones that you have to watch out for.
+small
+Lesser Wisp
+35 (+10.5 per level)
+0
+4 (+0.8 per level)
+6 m/s
+0
+Lesser Wisp aims at the player before firing a semi-random spread of 3 beams, dealing 150% damage each.
+The Lesser Wisp attack is a hitscan, meaning as long as one beam is lined up on you, regardless of distance, you will be hit.
+There tends to be several that spawn at one time, is a real problem for the Melee Survivors due to them being able to be high in the air
+medium
+Alloy Vulture
+200 (+60 per level)
+0.6 (+0.12 per level) hp/s
+15 (+3 per level)
+3 m/s
+0
+Alloy Vultures initially spawn on the ground, where they are slow-moving, but are able to do an upward-boost to enter their flying state, where they receive both increased and free-range movement.
+The Allow Vultures attack is it shooting circular projectiles that it fires at the survivor
+If you are having trouble hitting them in the air, if you use a stun they fall to the ground
+medium
+Beetle Guard
+600 (+180 per level)
+0
+12 (+2.4 per level)
+23.8 m/s
+0
+The Beetle Guard's first attack is that it slams the ground causing spikes to go to the enemy that it had targeted dealing 300% damage
+A possible skill that the Beetle Guard will use is an ability that it uses very close to its target causing the target to go flying inthe air dealing 440% damage
+medium
+Bighorn Bison
+600 (+180 per level)
+0
+12 (+2.4 per level)
+3 m/s
+0
+The Bison's primary attack is a charging attack that deals 300% damage, it takes 2 seconds to for the Bison to charge the attack. The Bison can be stunned out of this attack
+if the Bison's target is close it will try to headbutt which deals 300% damage
+Bighorn Bison exclusively appear on Rallypoint Delta, outside of the chance of appearing within the Void Fields Hidden Realm like other Monsters.
+medium
+Brass Contraption
+300 (+90 per level)
+0
+19 (+2 per level)
+10 m/s
+0
+The Bell's only ability is that it fires 3 metal balls with spikes
+They fire the metal ball spikes from right to left
+Due to the way that the metal spike balls are fired, if you move in a clockwise direction of the bells you will not be hit as much
+Medium
+Solus Probe
+220 (+66 per level)
+0
+15 (+3 per level)
+10 m/s
+10
+They are spawned by the Bosses in groups of three. They otherwise do not appear in-game naturally outside of the Void Fields Hidden Realm
+A Solus Probe attack by firing a blue beam at the player
+With slow tracking for the beam, it allows the Survivors that are able to move fast, to be able to get out of the way of the beam
+medium
+Stone Golem
+480 (+144 per level)
+0
+20 (+4 per level)
+6.6 m/s
+0
+An ability of the Stone Golem is a charging laser from its eye that deals 250% damage and takes 3 seconds to charge up
+When in close range of its target, The Stone Golem does a clap tha deals 200% damage
+Both abilities can be avoided very easily but the abilities can both be stopped by using a stun during at any point in the attack
+large
+Clay Templar
+700 (+210 per level)
+0
+16 (+3.2 per level)
+6 m/s
+0
+An ability that the Clay Templars use the most is their gatling gun it does alot of damage close range but there is a large cone of fire making them inaccurate at far ranges
+When an enemy is in close range, the Templar throws tar at the enemy giving it a debuff that decreases movement speed
+If a survivor stuns the Clay Templar while it is winding up its attack, then it will have to restart winding the gun up again
+large
+Elder Lermerian
+900 (+270 per level)
+0
+16 (+3.2 per level)
+13 m/s
+0
+The Elder Lemurian's first attack has them spit out 5 fireballs in a widespread, each dealing 200% damage. An indirect hit will deal 50% damage instead.
+The Elder Lemurian's second attack is a frontal breath of fire aimed directly at its feet, dealing 10 * 50% damage while also sometimes applying the Burning Debuff.
+The elite versions of Elder Lemurians have the ability to one-shot so try to take them out as soon as you can
+large
+Greater Wisp
+750 (+225 per level)
+0
+15 (+3 per level)
+7 m/s
+0
+Greater Wisps' attack though charging up and launching two fireballs (one from each hand) that explodes on contact, dealing at most 300% damage.
+When they die, Greater Wisps will fire one of their fireballs in a random direction.
+They hold the record for being able to spawn in the most enviroments with the stage Wetland Aspect being the only one they will spawn in on during a family event
+large
+Lunar Chimera Golem
+1900 (+570 per level)
+1.5/s (+0.3 per level)
+35 (+7 per level)
+8 m/s
+0
+Lunar Chimera will walk around, and occasionally jump. They may also slide around to reach places faster.
+When attacking, their cannon will glow and after a few seconds, it will fire 4 projectiles that move in a helix. These projectiles explode on contact.
+This enemy spawns in the stage that you fight Mithrix on the final stage called: Commencement
+Lunar Chimera Wisp
+850 (+255 per level)
+0
+15 (+3 per level)
+18 m/s
+0
+Lunar Chimera float around, similar to wisps. When it reaches a certain range of a player it will open fire in a similar manner to a Clay Templar.
+Sporadically, it will also launch a slow-moving projectile similar to that of the Wandering Vagrant.
+This enemy spawns in the stage that you fight Mithrix on the final stage called: Commencement
+medium 
+Mini Mushrum
+290 (+87 per level)
+0.6 (+0.12 per level) hp/s
+16 (+3.2 per level)
+2 m/s
+0
+The mushrum's main attack is a spore bomb that lands on the ground and makes a circle that burns targets in an area
+when their health is low they heal by creating an AoE healing circle around them that regenerate their health at roughly 5% HP/s.
+large
+Parent
+900 (+270 per level)
+0
+16 (+3.2 per level)
+11 m/s
+0
+The Parent is a monster native to Sky Meadow. It can be seen slowly lumbering around along with its fellow monsters.
+The Parent attack by slamming the ground with their two fists, damaging players for 350% damage in a large radius in front of them.
+The Parent also has a teleport that it uses once it sees a Survivor
+large
+Void Reaver
+1900 (+570 per level)
+0
+12 (+2.4 per level)
+6 m/s
+10
+The Void Reaver attacks by means of artillery, where it lay several Nullifier Bombs in a rough line near the target that explode in a small area for 100% damage after a 1 second delay
+Upon death, a delayed implosion will instantly kill anything caught in it, even the Void Reaver's allies and other Void Reavers.
+The Void Reaver is only present after you defeat Mithrix or if you are looping(Continuing to play the game and not go to the boss)
+boss
+Beetle Queen
+2100 (+630 per level)
+0
+25 (+5 per level)
+6 m/s
+20
+the Beetle has an attack when her health is below 50% she spawns flying beetles that inflict the beetlejuice debuff they can spawn in 3 beetles 
+she also shoots acid that stays on the ground as a puddle of acide
+The Beetle Queen has a chance of dropping the item Queens Gland when it is the boss fight
+boss
+Clay Dunestrider
+2100 (+630 per level)
+0
+20 (+4 per level)
+9 m/s
+20
+there is a chance that you get either balls of tar or clay pots thrown at you
+if the dunestrider takes enough damage, it starts to take health of nearby enemies
+The Clay Dunestrider has a chance of dropping the item Mired Urn when it is the boss fight
+boss
+Grovetender
+2800 (+840 per level)
+0
+23 (+4.6 per level)
+10 m/s
+20
+the Grovetender will throw a swarm of purple wisps that explode on contact dealing 100% damage each unless they are killed
+Another attack is that the Grovetender throws many chains in a direction that deals 100% damage also have the chance of getting thrown in the air
+The Grovetender has a chance of dropping the item Little Disciplewhen it is the boss fight
+boss
+Imp Overlord
+2800 (+840 per level)
+0
+16 (+3.2 per level)
+13 m/s
+20
+The imp overlord melees when in range dealing 5x200% damage
+Also has a chance of throwing 5-6 spikes tjat deal 30% damage and cause 3 ticks of bleed if they dont hit a player they stick in the ground waiting for them to step on them
+The Imp Overlord has a chance of dropping the item Shatterspleen when it is the boss fight
+boss
+Magma Worm
+2400 (+720 per level)
+0
+10 (+2 per level)
+20 m/s
+15
+The Worm will erupt out of the ground and launch itself into the sky, before burrowing back into the ground.
+The Worm will snake quickly from the ground and remain in close proximity to its target.
+The Magma Worm has the chance of dropping the item Molten Perferator when it is the boss fight
+boss
+Overloading Worm
+12000 (+3600 per level)
+0
+50 (+10 per level)
+20 m/s
+15
+The Worm will erupt out of the ground and launch itself into the sky, before burrowing back into the ground.
+The Worm will snake quickly from the ground and remain in close proximity to its target.
+The Magma Worm has the chance of dropping the item Molten Perferator when it is the boss fight
+side boss
+Scavenger
+3800 (+1140 per level)
+2/s (+0.4 per level)
+4 (+0.8 per level)
+3 m/s
+20
+Scavenger shoots 3 blasts with 4 projectiles each
+Scavenger throws 10 exploding thqwibs, these use any onkill effect tha the scavenger might get when it spawns in 
+It has the ability to look through its bag giving itself an item and when it dies the player gets to look through bag that it drops
+boss
+Solus Control Unit
+2500 (+750 per level)
+0
+15 (+3 per level)
+7 m/s
+20
+A charge shot where it will fire six light blue orbs at the player in either a horizontal or vertical line, dealing 100% damage each.
+it can also summon 3 solus probes or have blue circles on the ground dealing 400% damage
+very similar to the Alloy Worship unit
+side boss
+Twisted Scavengers (Kipkip)
+kip-kip,twiptwip and, guragura 3230 (+969 per level) wipwip 5700 (+1710 per level) 
+2/s (+0.4 per level)
+kipkip 4 (+0.8 per level) wipwip 2.5 (+0.5 per level) twiptwip 4 (+0.8 per level) guragura 4 (+0.8 per level)
+3 m/s
+20
+There are 4 Twisted Scavengers, each sharing their moveset with regular Scavengers, but having their own preset list of Items and Equipment to spawn with, including one Lunar Item/Equipment.
+They all serve as the potential Boss of A Moment, Whole, but only one Twisted Scavenger appears, being randomly chosen.
+Upon killing the Twisted Scavenger, and opening its sack, instead of dropping 10 random Items, it drops 10 Lunar Coins. After a while, the screen will blackout, and the game will be over.
+boss
+Stone Titan
+2100 (+630 per level)
+0
+40 (+8 per level)
+5 m/s
+20
+The Titan fires a laser from its eye after momentarily charging it, inflicting large sustained amounts of damage to its target. dealing 24x12.5% damage
+The Titan also punch the ground that would come up underneath the player and knock the player into the air dealing 100% damage
+The Stone Titan has a chance of dropping the item Titanic Knurl when it is the boss fight
+boss
+Wandering Vagrant
+2100 (+630 per level)
+0
+6.5 (+1.3 per level)
+6 m/s
+15
+The Vagrant will summon and launch 6 fast moving orbs in quick succession in the direction of a target. this attack deals 6x400% damage also a chance for a slow orb that is 600% damage
+The Vagrant will explode when it is low health dealing lethal damage to anyone in line of sight dealing 2000% damage
+The Wandering Vagrant has the chance of dropping the item Genesis Loop when it is the boss fight
+side boss
+Alloy Worship Unit
+2500 (+750 per level)
+0
+15 (+3 per level)
+7 m/s
+30
+A charge shot where it will fire six light blue orbs at the player in either a horizontal or vertical line, dealing 100% damage each.
+it can also summon 3 solus probes or have blue circles on the ground dealing 400% damage
+when killed, there is a guarantee for a legendary item for each player in the game
+side boss
+Aurelionite
+2100 (+630 per level)
+0
+40 (+8 per level)
+5 m/s
+20
+The Titan fires a laser from its eye after momentarily charging it. Dealing  24 * 100% damage (laser projectile) and 24 * 12.5% damage (laser beam)
+Aurelionite bends downwards and stabs its sword into the ground before a line of 6 swords shoot from the ground underneath its target
+in order to kill the aurelionite you need to activate several Halcyon beacons, then on killing Aurelionite, it drops the item Halcyon Seed
+boss
+1000 (+300 per level)
+0
+16 (+3.2 per level)
+15 m/s
+20 (Plus Adaptive Armor)
+phase 1: basic attacks  phase 2: terrain changes, several Lunar Chimera spawn in
+phase 3: more powerful, summons more chimera ability to get cripple debuff
+phase 4: Mithrix steals the items of all players and gains their buffs as you damage him you get items back once killed, the rest of items are released.
