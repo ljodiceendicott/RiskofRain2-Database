@@ -25,10 +25,10 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jlblimg" min="-2" pref="194" max="-2" attributes="0"/>
+              <Component id="jlblimg" min="-2" pref="252" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblitmDescript" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
@@ -42,11 +42,11 @@
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jlblitmName" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="860" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="1323" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

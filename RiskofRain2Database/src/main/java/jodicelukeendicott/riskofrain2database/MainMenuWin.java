@@ -12,6 +12,7 @@ package jodicelukeendicott.riskofrain2database;
 public class MainMenuWin extends javax.swing.JFrame {
     GameItemSelectionWin gisw;
     SurvivorSelectionWin ssw;
+    EnemySelectionWin esw;
     /**
      * Creates new form MainMenuWin
      */
@@ -20,6 +21,8 @@ public class MainMenuWin extends javax.swing.JFrame {
         gisw.setVisible(false);
         ssw = new SurvivorSelectionWin();
         ssw.setVisible(false);
+        esw = new EnemySelectionWin();
+        esw.setVisible(false);
         initComponents();
     }
 
@@ -111,7 +114,8 @@ public class MainMenuWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnSurvivorActionPerformed
 
     private void jbtnEnemiesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnEnemiesActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
+        esw.setVisible(true);
     }//GEN-LAST:event_jbtnEnemiesActionPerformed
 
     /**

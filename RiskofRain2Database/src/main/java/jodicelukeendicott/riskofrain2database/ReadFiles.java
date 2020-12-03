@@ -23,6 +23,7 @@ public class ReadFiles{
     private Scanner x;
     public ArrayList<GameItem> alGameItem;
     public ArrayList<Survivor> alSurvivor;
+    public ArrayList<Enemy> alEnemy;
     public ArrayList<Double> stacks;
     public ArrayList<Ability> tempabil;
     public Gson g = new Gson();
@@ -156,6 +157,51 @@ public class ReadFiles{
         
      return alSurvivor;
     } 
+    
+    public ArrayList<Enemy> readEnemy(){
+        alEnemy = new ArrayList<>();
+       
+        File enemytxt = new File(getClass().getResource("/RORmonsterdata.txt").getFile()); 
+            try {
+            x = new Scanner(enemytxt); 
+            while(x.hasNext()){
+                String size =x.nextLine();
+               String name =x.nextLine();
+               System.out.println("Size:"+size);
+                System.out.println("Name:"+name);
+              String health =x.nextLine();
+              System.out.println("Health:"+health);
+              String healthregen =x.nextLine();
+              System.out.println("healthregen:"+healthregen);
+              String damage =x.nextLine();
+              System.out.println("damage:"+damage);
+              String speed =x.nextLine();
+              System.out.println("speed:"+speed);
+              String armor =x.nextLine();
+              System.out.println("armor:"+armor);
+              String behavior1 =x.nextLine();
+              System.out.println("behav1:"+behavior1);
+              String behavior2 =x.nextLine();
+              System.out.println("Behav2:"+behavior2);
+              String fact =x.nextLine();
+              System.out.println("fact:"+fact);
+               
+              //Enemy(String size,String name,String health, String healthregen,String damage, String speed, String armor, String info1, String info2, String fact){
+              
+             Enemy e = new Enemy(size,name,health,healthregen,damage,speed,armor,behavior1,behavior2,fact);
+             alEnemy.add(e);
+              
+              
+            }
+           x.close();
+            
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ReadFiles.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        return alEnemy;
+    }
     //READ IN PLAYERS/ENEMIES
     /*
     public void itemstoJson(){

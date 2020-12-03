@@ -39,7 +39,7 @@ Drop a healing orb on kill.",
 Killing an enemy spawns a healing orb that heals for 8 plus an additional 2%(+2% per stack) of maximum health.
 0 2 4 6 8 10 12 14 16 18 20
 white
-Lens-Maker's#Glasses
+Lens-Makers#Glasses
 Chance to Critically Strike, dealing double damage.
 Your attacks have a 10%(+10% per stack) chance to Critically Strike, dealing double damage.
 0 10 20 30 40 50 60 70 80 90 100
