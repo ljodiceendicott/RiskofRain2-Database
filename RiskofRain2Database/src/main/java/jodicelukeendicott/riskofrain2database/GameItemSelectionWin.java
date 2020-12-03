@@ -277,39 +277,27 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }//GEN-LAST:event_btnbackActionPerformed
 
     private void jbtnTglwhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglwhiteActionPerformed
-         dlm.clear();
-          this.addtodlm("white");
-          this.fixButtonState(jbtnTglwhite);
+        this.changeWin("white", jbtnTglwhite);
     }//GEN-LAST:event_jbtnTglwhiteActionPerformed
 
     private void jbtnTglgreenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglgreenActionPerformed
-    dlm.clear();
-    this.addtodlm("green");
-    this.fixButtonState(jbtnTglgreen);
+        this.changeWin("green",jbtnTglgreen);
     }//GEN-LAST:event_jbtnTglgreenActionPerformed
 
     private void jbtnTglredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglredActionPerformed
-    dlm.clear();
-    this.addtodlm("red");
-    this.fixButtonState(jbtnTglred);
+        this.changeWin("red", jbtnTglred);
     }//GEN-LAST:event_jbtnTglredActionPerformed
 
     private void jbtnTglbossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglbossActionPerformed
-    dlm.clear();
-    this.addtodlm("boss");
-    this.fixButtonState(jbtnTglboss);       
+        this.changeWin("boss", jbtnTglboss);      
     }//GEN-LAST:event_jbtnTglbossActionPerformed
 
     private void jbtnTgllunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTgllunarActionPerformed
-    dlm.clear();
-    this.addtodlm("blue");
-    this.fixButtonState(jbtnTgllunar);
+        this.changeWin("blue",jbtnTgllunar);
     }//GEN-LAST:event_jbtnTgllunarActionPerformed
 
     private void jbtnTglotherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnTglotherActionPerformed
-    dlm.clear();
-    this.addtodlm("other");
-    this.fixButtonState(jbtnTglother);
+        this.changeWin("other", jbtnTglother);
     }//GEN-LAST:event_jbtnTglotherActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
@@ -320,8 +308,8 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jList1ValueChanged
 
     private void addtodlm(String type){
-        if(jbtnTglAll.isSelected()){
         dlm.clear();
+        if(jbtnTglAll.isSelected()){
         jbtnTglAll.setSelected(false);
         jbtnTglAll.setEnabled(true);
         }
@@ -342,6 +330,11 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jbtnTglother.setSelected(false);
         b.setSelected(true);
         
+    }
+    private void changeWin(String itmtype,JToggleButton tglb){
+        idx = -1;
+        this.addtodlm(itmtype);
+        this.fixButtonState(tglb);
     }
      /**
      * @param args the command line arguments

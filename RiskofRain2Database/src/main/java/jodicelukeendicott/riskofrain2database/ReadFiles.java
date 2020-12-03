@@ -87,6 +87,7 @@ public class ReadFiles{
          alGameItem.add(itm);
          
        }
+       System.out.println(name);
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
        //adding game item to an arraylist making it so that I can put into dlm easier
     }
@@ -167,24 +168,24 @@ public class ReadFiles{
             while(x.hasNext()){
                 String size =x.nextLine();
                String name =x.nextLine();
-               System.out.println("Size:"+size);
-                System.out.println("Name:"+name);
+             //  System.out.println("Size:"+size);
+              //  System.out.println("Name:"+name);
               String health =x.nextLine();
-              System.out.println("Health:"+health);
+             // System.out.println("Health:"+health);
               String healthregen =x.nextLine();
-              System.out.println("healthregen:"+healthregen);
+             // System.out.println("healthregen:"+healthregen);
               String damage =x.nextLine();
-              System.out.println("damage:"+damage);
+             // System.out.println("damage:"+damage);
               String speed =x.nextLine();
-              System.out.println("speed:"+speed);
+             // System.out.println("speed:"+speed);
               String armor =x.nextLine();
-              System.out.println("armor:"+armor);
+             // System.out.println("armor:"+armor);
               String behavior1 =x.nextLine();
-              System.out.println("behav1:"+behavior1);
+             // System.out.println("behav1:"+behavior1);
               String behavior2 =x.nextLine();
-              System.out.println("Behav2:"+behavior2);
+             // System.out.println("Behav2:"+behavior2);
               String fact =x.nextLine();
-              System.out.println("fact:"+fact);
+             // System.out.println("fact:"+fact);
                
               //Enemy(String size,String name,String health, String healthregen,String damage, String speed, String armor, String info1, String info2, String fact){
               

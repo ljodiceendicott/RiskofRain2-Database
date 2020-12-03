@@ -279,7 +279,7 @@ A charge shot where it will fire six light blue orbs at the player in either a h
 it can also summon 3 solus probes or have blue circles on the ground dealing 400% damage
 very similar to the Alloy Worship unit
 side boss
-Twisted Scavengers (Kipkip)
+Twisted Scavengers (Kipkip)(Twiptwip)(Guragura)(Wipwip)
 kip-kip,twiptwip and, guragura 3230 (+969 per level) wipwip 5700 (+1710 per level)
 2/s (+0.4 per level)
 kipkip 4 (+0.8 per level) wipwip 2.5 (+0.5 per level) twiptwip 4 (+0.8 per level) guragura 4 (+0.8 per level)
