@@ -12,18 +12,24 @@ import java.util.Hashtable;
  * @author lukej
  */
 public class RunLogEntry {
-   private Enemy killedBy;
-   private String time;
+   private String survivorplayed;
+   private String killedBy;
+   private int time;
    private Boolean pf;
    private int stagesDone;
    private Hashtable<String,Integer> items;
    private Hashtable<String,Integer> enemies;
-  RunLogEntry(String time, Boolean pf, int sd, Hashtable<String,Integer> itm, Hashtable<String,Integer> e, Enemy kb){
+  RunLogEntry(int time, Boolean pf, int sd, Hashtable<String,Integer> itm, Hashtable<String,Integer> e, String kb, String survplayed){
      this.time= time;
      this.pf = pf;
      this.stagesDone = sd;
      this.items = itm;
      this.enemies = e;
      this.killedBy = kb;
+     this.survivorplayed = survplayed;
   }
+   @Override
+  public String toString(){
+      return "Time:("+this.time+") "+this.survivorplayed+" Stages Complete:"+this.stagesDone;
+}
 }

@@ -13,6 +13,7 @@ public class MainMenuWin extends javax.swing.JFrame {
     GameItemSelectionWin gisw;
     SurvivorSelectionWin ssw;
     EnemySelectionWin esw;
+    RunLogWin rlw;
     /**
      * Creates new form MainMenuWin
      */
@@ -23,6 +24,9 @@ public class MainMenuWin extends javax.swing.JFrame {
         ssw.setVisible(false);
         esw = new EnemySelectionWin();
         esw.setVisible(false);
+        rlw = new RunLogWin();
+        rlw.setVisible(false);
+        
         initComponents();
     }
 
@@ -71,6 +75,11 @@ public class MainMenuWin extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ror2mainwinimg.png"))); // NOI18N
 
         jButton1.setText("Player Game Log");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -124,6 +133,11 @@ public class MainMenuWin extends javax.swing.JFrame {
         this.setVisible(false);
         esw.setVisible(true);
     }//GEN-LAST:event_jbtnEnemiesActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        rlw.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

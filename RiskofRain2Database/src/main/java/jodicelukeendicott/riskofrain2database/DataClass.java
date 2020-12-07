@@ -14,13 +14,10 @@ import java.util.Hashtable;
  */
 public class DataClass {
     //delete Class due to not neeeding I can put hashtable and call readfiles from another location
-    public static Hashtable<String,GameItem> items;
     ReadFiles rf;
     
     public DataClass() throws FileNotFoundException{
         //creation of the hashtables that will hold the information
-       
-        items = new Hashtable<>();
         rf = new ReadFiles();
         
     }

@@ -21,11 +21,11 @@ import java.util.logging.Logger;
  */
 public class ReadFiles{
     private Scanner x;
-    public ArrayList<GameItem> alGameItem;
-    public ArrayList<Survivor> alSurvivor;
-    public ArrayList<Enemy> alEnemy;
-    public ArrayList<Double> stacks;
-    public ArrayList<Ability> tempabil;
+    private static ArrayList<GameItem> alGameItem;
+    private static ArrayList<Survivor> alSurvivor;
+    private static ArrayList<Enemy> alEnemy;
+    private ArrayList<Double> stacks;
+    private ArrayList<Ability> tempabil;
     public Gson g = new Gson();
     
     public ReadFiles() throws FileNotFoundException{
@@ -201,6 +201,15 @@ public class ReadFiles{
         }
         
         
+        return alEnemy;
+    }
+    public static ArrayList<GameItem> getItems(){
+        return alGameItem;
+    }
+    public static ArrayList<Survivor> getSurvivors(){
+        return alSurvivor;
+    }
+    public static ArrayList<Enemy> getEnemies(){
         return alEnemy;
     }
     //READ IN PLAYERS/ENEMIES
