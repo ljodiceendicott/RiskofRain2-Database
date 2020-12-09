@@ -5,7 +5,7 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
-import com.google.gson.Gson;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URL;
@@ -26,8 +26,7 @@ public class ReadFiles{
     private static ArrayList<Enemy> alEnemy;
     private ArrayList<Double> stacks;
     private ArrayList<Ability> tempabil;
-    public Gson g = new Gson();
-    
+   
     public ReadFiles() throws FileNotFoundException{
        
         //this.readEntityFile();
@@ -87,7 +86,6 @@ public class ReadFiles{
          alGameItem.add(itm);
          
        }
-       System.out.println(name);
       //adding GameItem itm to the hashtable location given by the itm as well as the rarity of the itm
        //adding game item to an arraylist making it so that I can put into dlm easier
     }

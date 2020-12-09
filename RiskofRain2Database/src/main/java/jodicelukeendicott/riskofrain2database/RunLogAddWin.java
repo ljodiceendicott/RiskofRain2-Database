@@ -8,6 +8,7 @@ package jodicelukeendicott.riskofrain2database;
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -25,6 +26,7 @@ public class RunLogAddWin extends javax.swing.JFrame {
     
     DefaultTableModel dtmitems;
     DefaultTableModel dtmenemy;
+      RunLogAddItemWin itmwin;
     
     /**
      * Creates new form RunLogAddWin
@@ -33,6 +35,11 @@ public class RunLogAddWin extends javax.swing.JFrame {
         initComponents();
     }
     public RunLogAddWin(DefaultListModel dlm, RunLogWin rw) {
+        items = ReadFiles.getItems();
+         survivor = ReadFiles.getSurvivors();
+         enemies = ReadFiles.getEnemies();
+        itmwin= new RunLogAddItemWin(items);
+        itmwin.setVisible(false);
         dcbmenemy = new DefaultComboBoxModel<>();
         dcbmsurv = new DefaultComboBoxModel<>();
         dtmitems = new DefaultTableModel();
@@ -40,9 +47,7 @@ public class RunLogAddWin extends javax.swing.JFrame {
         initComponents();
          rundlm = dlm;
          backwin = rw;
-         items = ReadFiles.getItems();
-         survivor = ReadFiles.getSurvivors();
-         enemies = ReadFiles.getEnemies();
+         
             dcbmenemy.addElement("<~~~Please Select Option~~~~~>");
             dcbmenemy.addElement("I have no idea");
          enemies.forEach(e -> {
@@ -64,18 +69,10 @@ public class RunLogAddWin extends javax.swing.JFrame {
 
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        enemyPanel = new javax.swing.JPanel();
-        jcbene = new javax.swing.JCheckBox();
-        jbtnene = new javax.swing.JButton();
-        itemPanel = new javax.swing.JPanel();
-        jcbitems = new javax.swing.JCheckBox();
-        jbtnitem = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jtfRuntime = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jtfstagesComplete = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jtfloopscomplete = new javax.swing.JTextField();
         survivorcombo = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         enemycombo = new javax.swing.JComboBox<>();
@@ -84,6 +81,9 @@ public class RunLogAddWin extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jcbPassFail = new javax.swing.JCheckBox();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtxtNotes = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -100,69 +100,6 @@ public class RunLogAddWin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        enemyPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jcbene.setText("Add Enemies Killed to Log");
-        jcbene.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbeneActionPerformed(evt);
-            }
-        });
-
-        jbtnene.setText("Add Enemies");
-        jbtnene.setEnabled(false);
-
-        javax.swing.GroupLayout enemyPanelLayout = new javax.swing.GroupLayout(enemyPanel);
-        enemyPanel.setLayout(enemyPanelLayout);
-        enemyPanelLayout.setHorizontalGroup(
-            enemyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jbtnene, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-            .addGroup(enemyPanelLayout.createSequentialGroup()
-                .addComponent(jcbene, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        enemyPanelLayout.setVerticalGroup(
-            enemyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(enemyPanelLayout.createSequentialGroup()
-                .addComponent(jcbene)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbtnene)
-                .addContainerGap(176, Short.MAX_VALUE))
-        );
-
-        itemPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jcbitems.setText("Add Items picked up to Log");
-        jcbitems.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcbitemsActionPerformed(evt);
-            }
-        });
-
-        jbtnitem.setText("Add Items");
-        jbtnitem.setEnabled(false);
-        jbtnitem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnitemActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout itemPanelLayout = new javax.swing.GroupLayout(itemPanel);
-        itemPanel.setLayout(itemPanelLayout);
-        itemPanelLayout.setHorizontalGroup(
-            itemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jcbitems, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
-            .addComponent(jbtnitem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        itemPanelLayout.setVerticalGroup(
-            itemPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(itemPanelLayout.createSequentialGroup()
-                .addComponent(jcbitems)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jbtnitem)
-                .addContainerGap(176, Short.MAX_VALUE))
-        );
-
         jLabel1.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel1.setText("Run time:");
 
@@ -175,14 +112,9 @@ public class RunLogAddWin extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jLabel2.setText("Stages Complete:");
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel3.setText("Loops Completed:");
-
-        jtfloopscomplete.setEditable(false);
-        jtfloopscomplete.addActionListener(new java.awt.event.ActionListener() {
+        jtfstagesComplete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfloopscompleteActionPerformed(evt);
+                jtfstagesCompleteActionPerformed(evt);
             }
         });
 
@@ -231,6 +163,13 @@ public class RunLogAddWin extends javax.swing.JFrame {
             }
         });
 
+        jtxtNotes.setColumns(20);
+        jtxtNotes.setRows(5);
+        jScrollPane1.setViewportView(jtxtNotes);
+
+        jLabel7.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabel7.setText("Run Notes:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -238,18 +177,11 @@ public class RunLogAddWin extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(itemPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(103, 103, 103)
-                                .addComponent(jButton1)))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(enemyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addComponent(jButton1)
+                        .addGap(110, 110, 110)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap(40, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -262,13 +194,9 @@ public class RunLogAddWin extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabel6))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
+                                .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtfstagesComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtfloopscomplete, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jtfstagesComplete, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jcbPassFail, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -279,6 +207,12 @@ public class RunLogAddWin extends javax.swing.JFrame {
                             .addComponent(survivorcombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(enemycombo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(58, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -304,19 +238,14 @@ public class RunLogAddWin extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(enemycombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfstagesComplete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtfloopscomplete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(itemPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(enemyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(11, 11, 11)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jtfstagesComplete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -325,27 +254,6 @@ public class RunLogAddWin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jcbeneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbeneActionPerformed
-        // TODO add your handling code here:
-        if(jcbene.isSelected()){
-            jbtnene.setEnabled(true);
-        }
-        else{
-            jbtnene.setEnabled(false);
-            //clear thing
-        }
-    }//GEN-LAST:event_jcbeneActionPerformed
-
-    private void jcbitemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbitemsActionPerformed
-        // TODO add your handling code here:
-        if(jcbitems.isSelected()){
-            jbtnitem.setEnabled(true);
-        }
-        else{
-            jbtnitem.setEnabled(false);
-        }
-    }//GEN-LAST:event_jcbitemsActionPerformed
 
     private void jtfRuntimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfRuntimeActionPerformed
         // TODO add your handling code here:
@@ -364,6 +272,11 @@ public class RunLogAddWin extends javax.swing.JFrame {
    int runtimemin = Integer.parseInt(jtfRuntime.getText());
    int stagesComplete = Integer.parseInt(jtfstagesComplete.getText());
    String playedchar = (String) dcbmsurv.getSelectedItem();
+   if(playedchar=="<~~~Please Select Option~~~~~>"){
+       JOptionPane.showMessageDialog(this, "please pick the survivor that you have played as");
+       return;
+   }
+   
    Boolean pf= jcbPassFail.isSelected();
    String enemykilledby;
    if(pf){
@@ -372,26 +285,21 @@ public class RunLogAddWin extends javax.swing.JFrame {
    else{
      enemykilledby = (String) enemycombo.getSelectedItem();
    }
+   String notes = jtxtNotes.getText();
   //String time, Boolean pf, int sd, Hashtable<String,Integer> itm, Hashtable<String,Integer> e, Enemy kb){
-   RunLogEntry rle = new RunLogEntry(runtimemin,pf,stagesComplete,null,null,enemykilledby, playedchar);
+   RunLogEntry rle = new RunLogEntry(runtimemin,pf,stagesComplete,enemykilledby, playedchar, notes);
    rundlm.addElement(rle);
-   this.dispose();
    backwin.setVisible(true);
-// rundlm.addElement(evt);
+   this.dispose();
+
+///send information to writefiles   
+   
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        this.dispose();
        backwin.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jtfloopscompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfloopscompleteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfloopscompleteActionPerformed
-
-    private void jbtnitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnitemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbtnitemActionPerformed
 
     private void jcbPassFailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbPassFailActionPerformed
         if(jcbPassFail.isSelected()){
@@ -401,6 +309,10 @@ public class RunLogAddWin extends javax.swing.JFrame {
             enemycombo.setEnabled(true);}
         
     }//GEN-LAST:event_jcbPassFailActionPerformed
+
+    private void jtfstagesCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfstagesCompleteActionPerformed
+
+    }//GEN-LAST:event_jtfstagesCompleteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -438,27 +350,22 @@ public class RunLogAddWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel enemyPanel;
     private javax.swing.JComboBox<String> enemycombo;
-    private javax.swing.JPanel itemPanel;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JButton jbtnene;
-    private javax.swing.JButton jbtnitem;
     private javax.swing.JCheckBox jcbPassFail;
-    private javax.swing.JCheckBox jcbene;
-    private javax.swing.JCheckBox jcbitems;
     private javax.swing.JTextField jtfRuntime;
-    private javax.swing.JTextField jtfloopscomplete;
     private javax.swing.JTextField jtfstagesComplete;
+    private javax.swing.JTextArea jtxtNotes;
     private javax.swing.JComboBox<String> survivorcombo;
     // End of variables declaration//GEN-END:variables
 }
