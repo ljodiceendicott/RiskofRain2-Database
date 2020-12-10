@@ -65,6 +65,16 @@ public class EnemySelectionWin extends javax.swing.JFrame {
         jbtntglSBoss = new javax.swing.JToggleButton();
         jbtntglBoss = new javax.swing.JToggleButton();
         btngetMonsInfo = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        exporttojson = new javax.swing.JMenuItem();
+        exporttotxt = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        menutoRuns = new javax.swing.JMenuItem();
+        menutoItem = new javax.swing.JMenuItem();
+        menutoSurv = new javax.swing.JMenuItem();
 
         jList1.setModel(dlm);
         jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
@@ -133,6 +143,64 @@ public class EnemySelectionWin extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setText("File");
+
+        jMenu4.setText("Export As..");
+
+        exporttojson.setText(".Json File");
+        exporttojson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exporttojsonActionPerformed(evt);
+            }
+        });
+        jMenu4.add(exporttojson);
+
+        exporttotxt.setText(".txt File");
+        exporttotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exporttotxtActionPerformed(evt);
+            }
+        });
+        jMenu4.add(exporttotxt);
+
+        jMenu1.add(jMenu4);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Navigate");
+
+        jMenu3.setText("Go To");
+
+        menutoRuns.setText("Run Log");
+        menutoRuns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoRunsActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menutoRuns);
+
+        menutoItem.setText("Item Database");
+        menutoItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoItemActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menutoItem);
+
+        menutoSurv.setText("Survivor Database");
+        menutoSurv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoSurvActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menutoSurv);
+
+        jMenu2.add(jMenu3);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -189,7 +257,7 @@ public class EnemySelectionWin extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btngetMonsInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnBacktoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 67, Short.MAX_VALUE)))
+                        .addGap(0, 44, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -246,6 +314,42 @@ public class EnemySelectionWin extends javax.swing.JFrame {
     private void jbtntglBossActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtntglBossActionPerformed
         this.changeWin("boss",jbtntglBoss);
     }//GEN-LAST:event_jbtntglBossActionPerformed
+
+    private void menutoRunsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoRunsActionPerformed
+       this.setVisible(false);
+        RunLogWin  runs =new RunLogWin();
+        runs.setVisible(true);
+    }//GEN-LAST:event_menutoRunsActionPerformed
+
+    private void menutoSurvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoSurvActionPerformed
+         this.setVisible(false);
+        SurvivorSelectionWin survwin = new SurvivorSelectionWin();
+        survwin.setVisible(true);
+    }//GEN-LAST:event_menutoSurvActionPerformed
+
+    private void menutoItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoItemActionPerformed
+        this.setVisible(false);
+        GameItemSelectionWin itmwin = new GameItemSelectionWin();
+        itmwin.setVisible(true);
+    }//GEN-LAST:event_menutoItemActionPerformed
+
+    private void exporttojsonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exporttojsonActionPerformed
+        if(dlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printEnemy(dlm,1);
+        }
+    }//GEN-LAST:event_exporttojsonActionPerformed
+
+    private void exporttotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exporttotxtActionPerformed
+         if(dlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printEnemy(dlm,2);
+      }
+    }//GEN-LAST:event_exporttotxtActionPerformed
     private void addtodlm(String size){
         dlm.clear();
         if(jbtntglAll.isSelected()){
@@ -310,8 +414,15 @@ public class EnemySelectionWin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBacktoMenu;
     private javax.swing.JButton btngetMonsInfo;
+    private javax.swing.JMenuItem exporttojson;
+    private javax.swing.JMenuItem exporttotxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<Enemy> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jbtntglAll;
     private javax.swing.JToggleButton jbtntglBoss;
@@ -319,5 +430,8 @@ public class EnemySelectionWin extends javax.swing.JFrame {
     private javax.swing.JToggleButton jbtntglMd;
     private javax.swing.JToggleButton jbtntglSBoss;
     private javax.swing.JToggleButton jbtntglSm;
+    private javax.swing.JMenuItem menutoItem;
+    private javax.swing.JMenuItem menutoRuns;
+    private javax.swing.JMenuItem menutoSurv;
     // End of variables declaration//GEN-END:variables
 }

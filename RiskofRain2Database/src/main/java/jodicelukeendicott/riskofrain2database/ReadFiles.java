@@ -6,14 +6,24 @@
 package jodicelukeendicott.riskofrain2database;
 
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.nio.file.FileSystems;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -201,6 +211,27 @@ public class ReadFiles{
         
         return alEnemy;
     }
+    public void readJsonRun(DefaultListModel<RunLogEntry> dlm){
+        try{
+        File runlog = new File(getClass().getResource("runlog.json").getFile());
+        Gson g = new Gson();
+        BufferedReader buffread = new BufferedReader(new FileReader(runlog));
+         ArrayList<RunLogEntry> jsonrunlog = g.fromJson(buffread, new TypeToken<ArrayList<RunLogEntry>>() {}.getType());
+            for(int i=0; i> jsonrunlog.size();i++){
+                dlm.addElement(jsonrunlog.get(i));
+            }
+        buffread.close();
+        
+        
+        }
+        catch (FileNotFoundException ex) {
+            JOptionPane.showMessageDialog(null, "can not find file");
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Issue reading in the file");
+        }
+    }
+    
+            
     public static ArrayList<GameItem> getItems(){
         return alGameItem;
     }
@@ -210,16 +241,7 @@ public class ReadFiles{
     public static ArrayList<Enemy> getEnemies(){
         return alEnemy;
     }
-    //READ IN PLAYERS/ENEMIES
-    /*
-    public void itemstoJson(){
-     //this will need the buffer then this will be the loop
-         /*
-        alGameItem.forEach(itm -> {
-              
-                    }); 
-        
-     }*/
+    
     }
    
 

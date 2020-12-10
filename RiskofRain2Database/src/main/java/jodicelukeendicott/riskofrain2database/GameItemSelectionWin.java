@@ -97,6 +97,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem5 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jbtngetinfo = new javax.swing.JButton();
@@ -109,6 +110,18 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         jbtnTglother = new javax.swing.JToggleButton();
         btnback = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        menutoJson = new javax.swing.JMenuItem();
+        menutotxt = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
+        menutoruns = new javax.swing.JMenuItem();
+        menutoenemy = new javax.swing.JMenuItem();
+        menutosurv = new javax.swing.JMenuItem();
+
+        jMenuItem5.setText("jMenuItem5");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Item Selection");
@@ -184,6 +197,64 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
                 btnbackActionPerformed(evt);
             }
         });
+
+        jMenu1.setText("File");
+
+        jMenu3.setText("Export As..");
+
+        menutoJson.setText(".Json File");
+        menutoJson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoJsonActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menutoJson);
+
+        menutotxt.setText(".txt File");
+        menutotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutotxtActionPerformed(evt);
+            }
+        });
+        jMenu3.add(menutotxt);
+
+        jMenu1.add(jMenu3);
+
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Navigate");
+
+        jMenu4.setText("Go To");
+
+        menutoruns.setText("Run Log");
+        menutoruns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutorunsActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutoruns);
+
+        menutoenemy.setText("Enemy Database");
+        menutoenemy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoenemyActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutoenemy);
+
+        menutosurv.setText("Survivor Database");
+        menutosurv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutosurvActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutosurv);
+
+        jMenu2.add(jMenu4);
+
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -307,6 +378,43 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
    }
     }//GEN-LAST:event_jList1ValueChanged
 
+    private void menutorunsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutorunsActionPerformed
+        this.setVisible(false);
+        RunLogWin  runs =new RunLogWin();
+        runs.setVisible(true);
+    }//GEN-LAST:event_menutorunsActionPerformed
+
+    private void menutoenemyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoenemyActionPerformed
+        this.setVisible(false);
+        EnemySelectionWin enwin = new EnemySelectionWin();
+        enwin.setVisible(true);
+    }//GEN-LAST:event_menutoenemyActionPerformed
+
+    private void menutosurvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutosurvActionPerformed
+        this.setVisible(false);
+        SurvivorSelectionWin survwin = new SurvivorSelectionWin();
+        survwin.setVisible(true);
+    }//GEN-LAST:event_menutosurvActionPerformed
+
+    private void menutoJsonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoJsonActionPerformed
+        if(dlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printItem(dlm,1);
+        }
+    }//GEN-LAST:event_menutoJsonActionPerformed
+
+    private void menutotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutotxtActionPerformed
+        if(dlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printItem(dlm,2);
+       
+      }
+    }//GEN-LAST:event_menutotxtActionPerformed
+
     private void addtodlm(String type){
         dlm.clear();
         if(jbtnTglAll.isSelected()){
@@ -375,6 +483,12 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     private javax.swing.JButton btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList<GameItem> jList1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JToggleButton jbtnTglAll;
     private javax.swing.JToggleButton jbtnTglboss;
@@ -384,5 +498,10 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     private javax.swing.JToggleButton jbtnTglred;
     private javax.swing.JToggleButton jbtnTglwhite;
     private javax.swing.JButton jbtngetinfo;
+    private javax.swing.JMenuItem menutoJson;
+    private javax.swing.JMenuItem menutoenemy;
+    private javax.swing.JMenuItem menutoruns;
+    private javax.swing.JMenuItem menutosurv;
+    private javax.swing.JMenuItem menutotxt;
     // End of variables declaration//GEN-END:variables
 }

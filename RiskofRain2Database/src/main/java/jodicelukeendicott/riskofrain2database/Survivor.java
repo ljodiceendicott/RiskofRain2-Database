@@ -23,7 +23,9 @@ public class Survivor extends Entity{
         loadout = new ArrayList<>();
         this.loadout = lo;
     }
-    
+    public String printInfo(){
+        return super.getInfo()+"How you Unlock Survivor:"+this.getUnlocking()+"\n Passive:"+this.getPassive()+"loadout:"+this.printAbilities();
+    }
     @Override
     public String toString() {
         return this.getName();
@@ -55,6 +57,13 @@ public class Survivor extends Entity{
     /**
      * @return the speed
      */
+   public String printAbilities(){
+       String abilities = "";
+       for(int i= 0; i > this.loadout.size(); i++){
+           abilities = abilities + loadout.get(i).printAbility();
+       }
+       return "";
+   }
    public Ability getAbility(int idx){
        return loadout.get(idx);
    }

@@ -39,6 +39,9 @@ public class GameItem {
    // public ImageIcon getIcon(){
      //   return img;
   //  }
+    public String printInfo(){
+        return "Rarity:"+this.getRarity()+"\n Name:"+this.getName()+"\n Pickup Text:"+this.getPickuptext()+"\n Effect:"+this.getEffect()+"How item Stacks:"+this.printstack();
+    }
 
     /**
      * @return the rarity
@@ -70,6 +73,13 @@ public class GameItem {
     @Override 
     public String toString(){
         return this.getName();
+    }
+    public String printstack(){
+        String stacknum = "";
+        for(int i =0; i>stack.size(); i++){
+            stacknum = stacknum+ "Item Amount:"+i+"Stat Effect:"+stack.get(i)+"\n";
+        }
+        return stacknum;
     }
     public double getstack(int i){
         return stack.get(i); 

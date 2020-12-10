@@ -21,6 +21,9 @@ public class Enemy extends Entity{
             this.info2 = info2;
             this.fact = fact;
         }
+        public String printInfo(){
+            return "Size:"+this.getSize()+"\n"+super.getInfo()+"Info #1:"+this.getInfo1()+"\nInfo#2:"+this.getInfo2()+"\nFact:"+this.getFact()+"\n";
+        }
 
     /**
      * @return the size

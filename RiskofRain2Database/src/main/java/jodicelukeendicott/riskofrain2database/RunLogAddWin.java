@@ -269,7 +269,15 @@ public class RunLogAddWin extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 //get the data
+if(jtfRuntime.getText()==null){
+    JOptionPane.showMessageDialog(this, "please put in the time for the run");
+    return;
+}
    int runtimemin = Integer.parseInt(jtfRuntime.getText());
+if(jtfstagesComplete.getText()==null){
+    JOptionPane.showMessageDialog(this, "please put in the time for the run");
+    return;
+}
    int stagesComplete = Integer.parseInt(jtfstagesComplete.getText());
    String playedchar = (String) dcbmsurv.getSelectedItem();
    if(playedchar=="<~~~Please Select Option~~~~~>"){
@@ -283,7 +291,13 @@ public class RunLogAddWin extends javax.swing.JFrame {
       enemykilledby = null;
    }
    else{
+       if(playedchar=="<~~~Please Select Option~~~~~>"){
+       JOptionPane.showMessageDialog(this, "please pick the survivor that you have played as");
+       return;
+   }
+       else{
      enemykilledby = (String) enemycombo.getSelectedItem();
+       }
    }
    String notes = jtxtNotes.getText();
   //String time, Boolean pf, int sd, Hashtable<String,Integer> itm, Hashtable<String,Integer> e, Enemy kb){

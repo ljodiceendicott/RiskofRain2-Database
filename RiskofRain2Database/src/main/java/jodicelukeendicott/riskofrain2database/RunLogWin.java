@@ -5,8 +5,12 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
+import javax.swing.JOptionPane;
 import static jodicelukeendicott.riskofrain2database.Main.mmw;
 
 /**
@@ -17,13 +21,25 @@ public class RunLogWin extends javax.swing.JFrame {
    private DefaultListModel<RunLogEntry> runlogdlm;
    public ArrayList<RunLogEntry> runs;
    private int idx = -1;
+   WriteFiles wf;
+   ReadFiles rf;
     /**
      * Creates new form RunLogWin
      */
     public RunLogWin() {
+      /*  try {
+           rf = new ReadFiles();
+            wf = new WriteFiles();
+           } catch (FileNotFoundException ex) {
+               Logger.getLogger(RunLogWin.class.getName()).log(Level.SEVERE, null, ex);
+           }
+        */
+          
+           
         runs = new ArrayList<>();
         runlogdlm = new DefaultListModel<>();
         initComponents();
+      //  rf.readJsonRun(runlogdlm);
         jbtnViewLog.setEnabled(false);
         
  
@@ -46,15 +62,15 @@ public class RunLogWin extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        menuToJson = new javax.swing.JMenuItem();
+        menuTotxt = new javax.swing.JMenuItem();
         jMenu5 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        menunewentry = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        menutoenemy = new javax.swing.JMenuItem();
+        menutosurv = new javax.swing.JMenuItem();
+        menutoitem = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,18 +107,33 @@ public class RunLogWin extends javax.swing.JFrame {
 
         jMenu2.setText("Export As..");
 
-        jMenuItem1.setText(".Json File");
-        jMenu2.add(jMenuItem1);
+        menuToJson.setText(".Json File");
+        menuToJson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuToJsonActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuToJson);
 
-        jMenuItem2.setText(".txt File");
-        jMenu2.add(jMenuItem2);
+        menuTotxt.setText(".txt File");
+        menuTotxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuTotxtActionPerformed(evt);
+            }
+        });
+        jMenu2.add(menuTotxt);
 
         jMenu1.add(jMenu2);
 
         jMenu5.setText("New");
 
-        jMenuItem6.setText("Log Entry");
-        jMenu5.add(jMenuItem6);
+        menunewentry.setText("Log Entry");
+        menunewentry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menunewentryActionPerformed(evt);
+            }
+        });
+        jMenu5.add(menunewentry);
 
         jMenu1.add(jMenu5);
 
@@ -112,14 +143,29 @@ public class RunLogWin extends javax.swing.JFrame {
 
         jMenu4.setText("Go To");
 
-        jMenuItem5.setText("Enemy Database");
-        jMenu4.add(jMenuItem5);
+        menutoenemy.setText("Enemy Database");
+        menutoenemy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoenemyActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutoenemy);
 
-        jMenuItem3.setText("Survivor Database");
-        jMenu4.add(jMenuItem3);
+        menutosurv.setText("Survivor Database");
+        menutosurv.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutosurvActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutosurv);
 
-        jMenuItem4.setText("Item Database");
-        jMenu4.add(jMenuItem4);
+        menutoitem.setText("Item Database");
+        menutoitem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menutoitemActionPerformed(evt);
+            }
+        });
+        jMenu4.add(menutoitem);
 
         jMenu3.add(jMenu4);
 
@@ -170,6 +216,7 @@ public class RunLogWin extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
       this.setVisible(false);
       mmw.setVisible(true);
+     // wf.saveRuns(runlogdlm);
       //Write information from this to a JSON File
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -184,6 +231,48 @@ public class RunLogWin extends javax.swing.JFrame {
         jbtnViewLog.setEnabled(true);
    }
     }//GEN-LAST:event_jList1ValueChanged
+
+    private void menuToJsonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuToJsonActionPerformed
+      if(runlogdlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printRun(runlogdlm,1);
+      }
+    }//GEN-LAST:event_menuToJsonActionPerformed
+
+    private void menunewentryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menunewentryActionPerformed
+        this.setVisible(false);
+        RunLogAddWin rlaw= new RunLogAddWin(runlogdlm, this);
+        rlaw.setVisible(true);
+    }//GEN-LAST:event_menunewentryActionPerformed
+
+    private void menuTotxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuTotxtActionPerformed
+  if(runlogdlm.size()==0){
+         JOptionPane.showMessageDialog(null, "There is nothing to export");
+      }
+      else{
+        WriteFiles.printRun(runlogdlm,2);
+      }
+    }//GEN-LAST:event_menuTotxtActionPerformed
+
+    private void menutoenemyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoenemyActionPerformed
+        this.setVisible(false);
+        EnemySelectionWin enwin = new EnemySelectionWin();
+        enwin.setVisible(true);
+    }//GEN-LAST:event_menutoenemyActionPerformed
+
+    private void menutosurvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutosurvActionPerformed
+        this.setVisible(false);
+        SurvivorSelectionWin survwin = new SurvivorSelectionWin();
+        survwin.setVisible(true);
+    }//GEN-LAST:event_menutosurvActionPerformed
+
+    private void menutoitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menutoitemActionPerformed
+        this.setVisible(false);
+        GameItemSelectionWin itmwin = new GameItemSelectionWin();
+        itmwin.setVisible(true);
+    }//GEN-LAST:event_menutoitemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,13 +319,13 @@ public class RunLogWin extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbtnViewLog;
+    private javax.swing.JMenuItem menuToJson;
+    private javax.swing.JMenuItem menuTotxt;
+    private javax.swing.JMenuItem menunewentry;
+    private javax.swing.JMenuItem menutoenemy;
+    private javax.swing.JMenuItem menutoitem;
+    private javax.swing.JMenuItem menutosurv;
     // End of variables declaration//GEN-END:variables
 }

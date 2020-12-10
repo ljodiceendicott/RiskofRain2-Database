@@ -34,5 +34,7 @@ public class Ability {
    public String getCD(){
        return coolDown;
    }
-   
+   public String printAbility(){
+       return "Ability Type:"+this.getLoadoutSlot()+"\n Ability Name:"+this.getName()+"\n Cooldown:"+this.getCD()+"\n Description:"+this.getDescrp()+"\n";
+   }
 }

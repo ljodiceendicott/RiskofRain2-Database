@@ -25,7 +25,9 @@ public class Entity {
         this.armor = armor;
         
     }
-
+    public String getInfo(){
+        return "Name:"+this.getName()+"\n Health:"+this.getHealth()+"\n Health Regeneration Speed:"+this.getHealthregen()+"\n Damage:"+this.getDamage()+"\n Speed:"+this.getSpeed()+"Armor:"+this.getArmor()+"\n";
+    }
     /**
      * @return the name
      */
