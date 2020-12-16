@@ -39,6 +39,7 @@ public class RunLogWin extends javax.swing.JFrame {
         runs = new ArrayList<>();
         runlogdlm = new DefaultListModel<>();
         initComponents();
+        this.setLocationRelativeTo(null);
       //  rf.readJsonRun(runlogdlm);
         jbtnViewLog.setEnabled(false);
         
@@ -226,7 +227,7 @@ public class RunLogWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnViewLogActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-    if(evt.getValueIsAdjusting()){
+    if(!evt.getValueIsAdjusting()){
        idx = evt.getLastIndex();
         jbtnViewLog.setEnabled(true);
    }

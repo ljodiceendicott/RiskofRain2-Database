@@ -19,6 +19,7 @@ public class SurvivorWin extends javax.swing.JFrame {
     }
     public SurvivorWin(Survivor s){
         initComponents();
+        jlicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+s.getName()+".png")));
         jlblSurvname.setText(s.getName());
         lblunlock.setText(s.getUnlocking());
         lblPassive.setText(s.getPassive());
@@ -50,6 +51,8 @@ public class SurvivorWin extends javax.swing.JFrame {
             lblability4name.setText(ab4.getName());
             lblability4cd.setText("Cooldown:"+ab4.getCD());
             lblability4desc.setText(ab4.getDescrp());
+            this.pack();
+            this.setLocationRelativeTo(null);
     }
 
     /**
@@ -61,8 +64,13 @@ public class SurvivorWin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        infopanel = new javax.swing.JPanel();
+        lblUnlockLabel = new javax.swing.JLabel();
+        lblunlock = new javax.swing.JLabel();
+        jlblPassLabel = new javax.swing.JLabel();
+        lblPassive = new javax.swing.JLabel();
         jlblSurvname = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        survinfopanel = new javax.swing.JPanel();
         lblSpeed = new javax.swing.JLabel();
         jlblArmorLabel = new javax.swing.JLabel();
         lblArmor = new javax.swing.JLabel();
@@ -73,12 +81,8 @@ public class SurvivorWin extends javax.swing.JFrame {
         lblDamageLabel = new javax.swing.JLabel();
         lblDamage = new javax.swing.JLabel();
         jlblSpeedLabel = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
-        lblUnlockLabel = new javax.swing.JLabel();
-        lblunlock = new javax.swing.JLabel();
-        jlblPassLabel = new javax.swing.JLabel();
-        lblPassive = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        abilitypanel = new javax.swing.JPanel();
         ability1panel = new javax.swing.JPanel();
         lblability1desc = new javax.swing.JLabel();
         lblability1cd = new javax.swing.JLabel();
@@ -99,7 +103,51 @@ public class SurvivorWin extends javax.swing.JFrame {
         lblability2name = new javax.swing.JLabel();
         lblability3name = new javax.swing.JLabel();
         lblability4name = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jlicon = new javax.swing.JLabel();
+
+        lblUnlockLabel.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        lblUnlockLabel.setText("How to Unlock ->");
+
+        lblunlock.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        lblunlock.setText("jLabel2");
+
+        jlblPassLabel.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        jlblPassLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jlblPassLabel.setText("Passive->");
+
+        lblPassive.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
+        lblPassive.setText("jLabel5");
+
+        javax.swing.GroupLayout infopanelLayout = new javax.swing.GroupLayout(infopanel);
+        infopanel.setLayout(infopanelLayout);
+        infopanelLayout.setHorizontalGroup(
+            infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infopanelLayout.createSequentialGroup()
+                .addGroup(infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, infopanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jlblPassLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblUnlockLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblunlock, javax.swing.GroupLayout.DEFAULT_SIZE, 1285, Short.MAX_VALUE)
+                    .addGroup(infopanelLayout.createSequentialGroup()
+                        .addComponent(lblPassive)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        infopanelLayout.setVerticalGroup(
+            infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infopanelLayout.createSequentialGroup()
+                .addGroup(infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUnlockLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblunlock))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(infopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblPassLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPassive))
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
 
         jlblSurvname.setFont(new java.awt.Font("Terminator Two", 1, 24)); // NOI18N
         jlblSurvname.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -135,103 +183,59 @@ public class SurvivorWin extends javax.swing.JFrame {
         jlblSpeedLabel.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
         jlblSpeedLabel.setText("Speed:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout survinfopanelLayout = new javax.swing.GroupLayout(survinfopanel);
+        survinfopanel.setLayout(survinfopanelLayout);
+        survinfopanelLayout.setHorizontalGroup(
+            survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(survinfopanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(survinfopanelLayout.createSequentialGroup()
                         .addComponent(lblDamageLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblDamage))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(survinfopanelLayout.createSequentialGroup()
                         .addComponent(jlblSpeedLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblSpeed))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(survinfopanelLayout.createSequentialGroup()
                         .addComponent(lblHealthRegenLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblHealthRegen))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(survinfopanelLayout.createSequentialGroup()
+                        .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlblArmorLabel)
                             .addComponent(jlblHealthLabel))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblHealth)
                             .addComponent(lblArmor))))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        survinfopanelLayout.setVerticalGroup(
+            survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(survinfopanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblSpeed)
                     .addComponent(jlblSpeedLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlblArmorLabel)
                     .addComponent(lblArmor))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlblHealthLabel)
                     .addComponent(lblHealth))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHealthRegenLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblHealthRegen))
                 .addGap(29, 29, 29)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(survinfopanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDamageLabel)
                     .addComponent(lblDamage))
-                .addContainerGap(65, Short.MAX_VALUE))
-        );
-
-        lblUnlockLabel.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        lblUnlockLabel.setText("How to Unlock ->");
-
-        lblunlock.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        lblunlock.setText("jLabel2");
-
-        jlblPassLabel.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        jlblPassLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jlblPassLabel.setText("Passive->");
-
-        lblPassive.setFont(new java.awt.Font("Arial Black", 0, 11)); // NOI18N
-        lblPassive.setText("jLabel5");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jlblPassLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(lblUnlockLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblunlock, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblPassive)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUnlockLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblunlock))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlblPassLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPassive))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         ability1panel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -391,43 +395,43 @@ public class SurvivorWin extends javax.swing.JFrame {
         lblability4name.setText("Ability 1 name");
         lblability4name.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout abilitypanelLayout = new javax.swing.GroupLayout(abilitypanel);
+        abilitypanel.setLayout(abilitypanelLayout);
+        abilitypanelLayout.setHorizontalGroup(
+            abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(abilitypanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(abilitypanelLayout.createSequentialGroup()
+                        .addGroup(abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblability3type)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGroup(abilitypanelLayout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblability1name, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblability3name, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lblability4name, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, abilitypanelLayout.createSequentialGroup()
+                        .addGroup(abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(ability4panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(ability3panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ability1panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1102, Short.MAX_VALUE)
+                            .addComponent(ability1panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1152, Short.MAX_VALUE)
                             .addComponent(ability2panel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, abilitypanelLayout.createSequentialGroup()
+                                .addGroup(abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(lblability4type, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblability1type, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblability2type, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, abilitypanelLayout.createSequentialGroup()
                                         .addGap(10, 10, 10)
                                         .addComponent(lblability2name, javax.swing.GroupLayout.PREFERRED_SIZE, 710, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 382, Short.MAX_VALUE)))
+                                .addGap(0, 432, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        abilitypanelLayout.setVerticalGroup(
+            abilitypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(abilitypanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblability1type)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -455,9 +459,7 @@ public class SurvivorWin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jLabel14.setBackground(new java.awt.Color(51, 51, 255));
-        jLabel14.setText("picture....Maybe");
-        jLabel14.setOpaque(true);
+        jScrollPane1.setViewportView(abilitypanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -466,35 +468,37 @@ public class SurvivorWin extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(23, 23, 23)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(survinfopanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlicon, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlblSurvname)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 179, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(12, 12, 12)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1193, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(239, 239, 239)
-                        .addComponent(jlblSurvname)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(infopanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jlblSurvname, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(infopanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(172, Short.MAX_VALUE))
+                        .addGap(48, 48, 48)
+                        .addComponent(survinfopanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jlicon, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         pack();
@@ -540,15 +544,15 @@ public class SurvivorWin extends javax.swing.JFrame {
     private javax.swing.JPanel ability2panel;
     private javax.swing.JPanel ability3panel;
     private javax.swing.JPanel ability4panel;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel abilitypanel;
+    private javax.swing.JPanel infopanel;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel jlblArmorLabel;
     private javax.swing.JLabel jlblHealthLabel;
     private javax.swing.JLabel jlblPassLabel;
     private javax.swing.JLabel jlblSpeedLabel;
     private javax.swing.JLabel jlblSurvname;
+    private javax.swing.JLabel jlicon;
     private javax.swing.JLabel lblArmor;
     private javax.swing.JLabel lblDamage;
     private javax.swing.JLabel lblDamageLabel;
@@ -575,5 +579,6 @@ public class SurvivorWin extends javax.swing.JFrame {
     private javax.swing.JLabel lblability4name;
     private javax.swing.JLabel lblability4type;
     private javax.swing.JLabel lblunlock;
+    private javax.swing.JPanel survinfopanel;
     // End of variables declaration//GEN-END:variables
 }

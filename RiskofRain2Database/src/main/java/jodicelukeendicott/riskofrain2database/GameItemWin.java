@@ -38,6 +38,7 @@ public class GameItemWin extends javax.swing.JFrame {
     }
     public GameItemWin(){
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

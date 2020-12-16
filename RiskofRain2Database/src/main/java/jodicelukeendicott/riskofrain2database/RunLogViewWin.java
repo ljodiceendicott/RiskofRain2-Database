@@ -19,8 +19,8 @@ public class RunLogViewWin extends javax.swing.JFrame {
     }
     public RunLogViewWin(RunLogEntry en){
         initComponents();
-        jltime.setText(""+en.getTime());
-        jlnumloops.setText(""+en.getStagesDone());
+        jlbTime.setText("Time:"+en.getTime());
+        jlbLoops.setText("Loops Complete:"+en.getStagesDone());
         jlcharname.setText(en.getSurvivorplayed());
         jlcharpic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+en.getSurvivorplayed()+".png")));
         if(!en.getBeatGame()){
@@ -40,6 +40,7 @@ public class RunLogViewWin extends javax.swing.JFrame {
         lbdefeated.setText("Defeated");
                 }
         jtpnotes.setText(en.getNotes());
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -51,12 +52,9 @@ public class RunLogViewWin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jlbTime = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jltime = new javax.swing.JLabel();
-        jlnumloops = new javax.swing.JLabel();
+        jlbLoops = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jlcharname = new javax.swing.JLabel();
         jlcharpic = new javax.swing.JLabel();
@@ -64,27 +62,21 @@ public class RunLogViewWin extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtpnotes = new javax.swing.JTextPane();
-        jPanel4 = new javax.swing.JPanel();
+        killedbypanel = new javax.swing.JPanel();
         jlkilled = new javax.swing.JLabel();
         jlenemypic = new javax.swing.JLabel();
         jlkilledbyname = new javax.swing.JLabel();
         lbdefeated = new javax.swing.JLabel();
 
-        jLabel1.setFont(new java.awt.Font("Terminator Two", 1, 30)); // NOI18N
-        jLabel1.setText("Time:");
+        jlbTime.setFont(new java.awt.Font("Terminator Two", 1, 30)); // NOI18N
+        jlbTime.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbTime.setText("Time:");
 
         jLabel2.setFont(new java.awt.Font("Terminator Two", 1, 24)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Terminator Two", 1, 30)); // NOI18N
-
-        jLabel6.setFont(new java.awt.Font("Terminator Two", 0, 24)); // NOI18N
-        jLabel6.setText("Loops Complete:");
-
-        jltime.setFont(new java.awt.Font("Arial Black", 3, 24)); // NOI18N
-        jltime.setText("jLabel7");
-
-        jlnumloops.setFont(new java.awt.Font("Arial Black", 3, 18)); // NOI18N
-        jlnumloops.setText("jLabel8");
+        jlbLoops.setFont(new java.awt.Font("Terminator Two", 0, 24)); // NOI18N
+        jlbLoops.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlbLoops.setText("Loops Complete:");
 
         jlcharname.setFont(new java.awt.Font("Terminator Two", 1, 36)); // NOI18N
         jlcharname.setText("char play");
@@ -152,22 +144,22 @@ public class RunLogViewWin extends javax.swing.JFrame {
         lbdefeated.setFont(new java.awt.Font("Terminator Two", 0, 18)); // NOI18N
         lbdefeated.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout killedbypanelLayout = new javax.swing.GroupLayout(killedbypanel);
+        killedbypanel.setLayout(killedbypanelLayout);
+        killedbypanelLayout.setHorizontalGroup(
+            killedbypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jlkilled, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+            .addGroup(killedbypanelLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(killedbypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jlenemypic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jlkilledbyname, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(lbdefeated, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        killedbypanelLayout.setVerticalGroup(
+            killedbypanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(killedbypanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jlkilled)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -175,7 +167,7 @@ public class RunLogViewWin extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jlenemypic, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lbdefeated, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE)
+                .addComponent(lbdefeated, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -184,24 +176,18 @@ public class RunLogViewWin extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlnumloops)
-                            .addComponent(jltime, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 38, Short.MAX_VALUE)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(killedbypanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlbTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jlbLoops, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -213,18 +199,13 @@ public class RunLogViewWin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel2)
-                                .addComponent(jltime)))
+                            .addComponent(jlbTime)
+                            .addComponent(jLabel2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jlnumloops))
-                        .addGap(31, 31, 31)
+                        .addComponent(jlbLoops)
+                        .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(killedbypanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -269,23 +250,20 @@ public class RunLogViewWin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jlbLoops;
+    private javax.swing.JLabel jlbTime;
     private javax.swing.JLabel jlcharname;
     private javax.swing.JLabel jlcharpic;
     private javax.swing.JLabel jlenemypic;
     private javax.swing.JLabel jlkilled;
     private javax.swing.JLabel jlkilledbyname;
-    private javax.swing.JLabel jlnumloops;
-    private javax.swing.JLabel jltime;
     private javax.swing.JTextPane jtpnotes;
+    private javax.swing.JPanel killedbypanel;
     private javax.swing.JLabel lbdefeated;
     // End of variables declaration//GEN-END:variables
 }

@@ -25,21 +25,18 @@ public class RunLogAddWin extends javax.swing.JFrame {
     ArrayList<Enemy> enemies;
     
     DefaultTableModel dtmitems;
-    DefaultTableModel dtmenemy;
-      RunLogAddItemWin itmwin;
-    
+    DefaultTableModel dtmenemy; 
     /**
      * Creates new form RunLogAddWin
      */
     public RunLogAddWin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
     public RunLogAddWin(DefaultListModel dlm, RunLogWin rw) {
         items = ReadFiles.getItems();
          survivor = ReadFiles.getSurvivors();
          enemies = ReadFiles.getEnemies();
-        itmwin= new RunLogAddItemWin(items);
-        itmwin.setVisible(false);
         dcbmenemy = new DefaultComboBoxModel<>();
         dcbmsurv = new DefaultComboBoxModel<>();
         dtmitems = new DefaultTableModel();
@@ -84,6 +81,8 @@ public class RunLogAddWin extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtxtNotes = new javax.swing.JTextArea();
         jLabel7 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        runName = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -170,6 +169,16 @@ public class RunLogAddWin extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
         jLabel7.setText("Run Notes:");
 
+        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        jLabel3.setText("Title For the Run:");
+
+        runName.setText("jTextField1");
+        runName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                runNameActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -211,7 +220,11 @@ public class RunLogAddWin extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(runName, javax.swing.GroupLayout.PREFERRED_SIZE, 410, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(37, 37, 37))
         );
         layout.setVerticalGroup(
@@ -241,11 +254,18 @@ public class RunLogAddWin extends javax.swing.JFrame {
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jtfstagesComplete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(runName, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(44, 44, 44)
                 .addComponent(jLabel7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -273,6 +293,7 @@ if(jtfRuntime.getText()==null){
     JOptionPane.showMessageDialog(this, "please put in the time for the run");
     return;
 }
+    String runname = runName.getText();
    int runtimemin = Integer.parseInt(jtfRuntime.getText());
 if(jtfstagesComplete.getText()==null){
     JOptionPane.showMessageDialog(this, "please put in the time for the run");
@@ -301,7 +322,7 @@ if(jtfstagesComplete.getText()==null){
    }
    String notes = jtxtNotes.getText();
   //String time, Boolean pf, int sd, Hashtable<String,Integer> itm, Hashtable<String,Integer> e, Enemy kb){
-   RunLogEntry rle = new RunLogEntry(runtimemin,pf,stagesComplete,enemykilledby, playedchar, notes);
+   RunLogEntry rle = new RunLogEntry(runtimemin,pf,stagesComplete,enemykilledby, playedchar, notes, runname);
    rundlm.addElement(rle);
    backwin.setVisible(true);
    this.dispose();
@@ -327,6 +348,10 @@ if(jtfstagesComplete.getText()==null){
     private void jtfstagesCompleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfstagesCompleteActionPerformed
 
     }//GEN-LAST:event_jtfstagesCompleteActionPerformed
+
+    private void runNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_runNameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -369,6 +394,7 @@ if(jtfstagesComplete.getText()==null){
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -380,6 +406,7 @@ if(jtfstagesComplete.getText()==null){
     private javax.swing.JTextField jtfRuntime;
     private javax.swing.JTextField jtfstagesComplete;
     private javax.swing.JTextArea jtxtNotes;
+    private javax.swing.JTextField runName;
     private javax.swing.JComboBox<String> survivorcombo;
     // End of variables declaration//GEN-END:variables
 }

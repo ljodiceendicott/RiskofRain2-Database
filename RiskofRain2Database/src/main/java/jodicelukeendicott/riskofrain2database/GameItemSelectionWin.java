@@ -5,11 +5,13 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.JToggleButton;
+import javax.swing.ListCellRenderer;
 import static jodicelukeendicott.riskofrain2database.Main.mmw;
 
 /**
@@ -17,6 +19,7 @@ import static jodicelukeendicott.riskofrain2database.Main.mmw;
  * @author lukej
  */
 public class GameItemSelectionWin extends javax.swing.JFrame {
+    public GameItemListRender render;
     public DefaultListModel<GameItem> dlm;
      private ArrayList<GameItem> al;
      private ArrayList<GameItem> dlmArrayl;
@@ -33,6 +36,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
      * Creates new form GameItemSelectionWin
      */
     public GameItemSelectionWin() {
+        render = new GameItemListRender();
         dlm = new DefaultListModel<>();
         al = new ArrayList<>();
         dlmArrayl = new ArrayList<>();
@@ -55,11 +59,14 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
        } catch (FileNotFoundException ex) {
           System.out.println("Error:"+ ex);
        }
-          
+        
           al.forEach(itm -> {
               dlm.addElement(itm);
               dlmArrayl.add(itm);
                     }); 
+            jList1.setCellRenderer(render);
+            jList1.setBackground(Color.gray);
+            this.setLocationRelativeTo(null);
              /* if(itm.getRarity().equals("white")){
                  white.add(itm);
              }
@@ -339,6 +346,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
               dlm.addElement(itm);
         });
         this.fixButtonState(jbtnTglAll);
+        jList1.setSelectedIndex(-1);
         
     }//GEN-LAST:event_jbtnTglAllActionPerformed
 
@@ -372,7 +380,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnTglotherActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-   if(evt.getValueIsAdjusting()){
+   if(!evt.getValueIsAdjusting()){
        idx = evt.getLastIndex();
         jbtngetinfo.setEnabled(true);
    }
@@ -443,6 +451,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         idx = -1;
         this.addtodlm(itmtype);
         this.fixButtonState(tglb);
+        jList1.setSelectedIndex(idx);
     }
      /**
      * @param args the command line arguments

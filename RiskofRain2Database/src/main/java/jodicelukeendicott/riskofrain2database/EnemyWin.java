@@ -19,6 +19,7 @@ public class EnemyWin extends javax.swing.JFrame {
     }
     public EnemyWin(Enemy e){
         initComponents();
+        lblMonstericon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+e.getName()+".png")));
         lblName.setText(e.getName());
         lblHealth.setText(e.getHealth());
         lblHealthRegen.setText(e.getHealthregen());
@@ -28,6 +29,8 @@ public class EnemyWin extends javax.swing.JFrame {
         lblNote1.setText(e.getInfo1());
         lblNote2.setText(e.getInfo2());
         lblFact.setText(e.getFact());
+        this.pack();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -59,13 +62,9 @@ public class EnemyWin extends javax.swing.JFrame {
         lblFact = new javax.swing.JLabel();
         lblNote2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
         lblName.setFont(new java.awt.Font("Terminator Two", 0, 24)); // NOI18N
         lblName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblName.setText("Enemy Name");
-
-        lblMonstericon.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 1, 11)); // NOI18N
         jLabel3.setText("Health:");
@@ -179,11 +178,6 @@ public class EnemyWin extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblNote1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(270, 270, 270)
-                                .addComponent(lblMonstericon, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
-                                .addGap(50, 50, 50))
-                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lblNote2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
@@ -191,7 +185,13 @@ public class EnemyWin extends javax.swing.JFrame {
                         .addGap(98, 98, 98)
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lblFact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(lblFact, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(278, 278, 278)
+                        .addComponent(lblMonstericon, javax.swing.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE)
+                        .addGap(50, 50, 50)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(

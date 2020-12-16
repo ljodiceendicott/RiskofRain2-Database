@@ -28,6 +28,7 @@ public class MainMenuWin extends javax.swing.JFrame {
         rlw.setVisible(false);
         
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

@@ -18,21 +18,26 @@ public class RunLogEntry {
    private Boolean beatGame;
    private int stagesDone;
   private String notes;
-  RunLogEntry(int time, Boolean pf, int sd, String kb, String survplayed,String notes){
+  private String runName;
+  RunLogEntry(int time, Boolean pf, int sd, String kb, String survplayed,String notes, String runName){
      this.time= time;
      this.beatGame = pf;
      this.stagesDone = sd;
      this.notes = notes;
      this.killedBy = kb;
      this.survivorplayed = survplayed;
+     this.runName= runName;
   }
   public String printInfo(){
       return "Time:"+this.getTime()+"\n Character Played:"+this.getSurvivorplayed()+"\n Stages Complete:"+this.getStagesDone()+"\n Notes From Run:"+this.getNotes()+"\n";
   }
    @Override
   public String toString(){
-      return "Time:("+this.getTime()+") Played As:"+this.getSurvivorplayed()+" Stages Complete:"+this.getStagesDone();
+      return this.runName+"  Time:"+this.time+" Char:"+this.getSurvivorplayed();
 }
+  public String getName(){
+      return runName;
+  }
   public boolean getBeatGame(){
       return this.beatGame;
   }

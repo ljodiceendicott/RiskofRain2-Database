@@ -38,6 +38,7 @@ public class SurvivorSelectionWin extends javax.swing.JFrame {
           sl.forEach(itm -> {
               dlm.addElement(itm);
                     }); 
+          this.setLocationRelativeTo(null);
     }
 
     /**
@@ -194,7 +195,7 @@ public class SurvivorSelectionWin extends javax.swing.JFrame {
     }//GEN-LAST:event_jbtnBackActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
-   if(evt.getValueIsAdjusting()){
+   if(!evt.getValueIsAdjusting()){
        idx = evt.getLastIndex();
         jbtnSurvInfo.setEnabled(true);
    }
