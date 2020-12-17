@@ -19,6 +19,7 @@ import static jodicelukeendicott.riskofrain2database.Main.mmw;
  */
 public class RunLogWin extends javax.swing.JFrame {
    private DefaultListModel<RunLogEntry> runlogdlm;
+   public RunLogRender render;
    public ArrayList<RunLogEntry> runs;
    private int idx = -1;
    WriteFiles wf;
@@ -35,10 +36,12 @@ public class RunLogWin extends javax.swing.JFrame {
            }
         */
           
-           
+        render = new RunLogRender();  
+//        jList1.setCellRenderer(render);
         runs = new ArrayList<>();
         runlogdlm = new DefaultListModel<>();
         initComponents();
+        this.setTitle("Run Log Selection Window");
         this.setLocationRelativeTo(null);
       //  rf.readJsonRun(runlogdlm);
         jbtnViewLog.setEnabled(false);

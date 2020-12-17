@@ -5,6 +5,8 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.awt.Color;
+
 /**
  *
  * @author lukej
@@ -28,7 +30,9 @@ public class MainMenuWin extends javax.swing.JFrame {
         rlw.setVisible(false);
         
         initComponents();
+        this.setTitle("Risk of Rain 2 Database By Luke Jodice");
         this.setLocationRelativeTo(null);
+        this.setBackground(Color.yellow);
     }
 
     /**
@@ -151,7 +155,7 @@ public class MainMenuWin extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows Classic".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

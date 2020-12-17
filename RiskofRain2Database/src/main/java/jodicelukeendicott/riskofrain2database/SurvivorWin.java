@@ -19,6 +19,7 @@ public class SurvivorWin extends javax.swing.JFrame {
     }
     public SurvivorWin(Survivor s){
         initComponents();
+        this.setTitle("Survivor Information For "+s.getName());
         jlicon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+s.getName()+".png")));
         jlblSurvname.setText(s.getName());
         lblunlock.setText(s.getUnlocking());

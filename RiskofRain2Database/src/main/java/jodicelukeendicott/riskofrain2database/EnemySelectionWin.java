@@ -18,6 +18,7 @@ import static jodicelukeendicott.riskofrain2database.Main.mmw;
  * @author lukej
  */
 public class EnemySelectionWin extends javax.swing.JFrame {
+    public EnemyRender render;
     private DefaultListModel<Enemy> dlm;
     private ArrayList<Enemy> enemyal;
     private int idx = -1;
@@ -26,11 +27,12 @@ public class EnemySelectionWin extends javax.swing.JFrame {
      */
  
     public EnemySelectionWin() {
-        
+    render = new EnemyRender();   
     dlm = new DefaultListModel<>();
     enemyal = new ArrayList<>();
     
     initComponents();
+    this.setTitle("Enemy Selection Window");
     //String size,String name,String health, String healthregen,String damage, String speed, String armor, String info1, String info2, String fact)
       try{
             ReadFiles rf = new ReadFiles();
@@ -42,6 +44,7 @@ public class EnemySelectionWin extends javax.swing.JFrame {
           enemyal.forEach(e -> {
               dlm.addElement(e);
                     }); 
+         jList1.setCellRenderer(render);
    this.setLocationRelativeTo(null);
     }
     

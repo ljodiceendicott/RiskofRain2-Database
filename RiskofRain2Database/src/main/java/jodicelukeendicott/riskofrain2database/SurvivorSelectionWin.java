@@ -5,6 +5,7 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
@@ -16,19 +17,23 @@ import static jodicelukeendicott.riskofrain2database.Main.mmw;
  * @author lukej
  */
 public class SurvivorSelectionWin extends javax.swing.JFrame {
-
-    DefaultListModel dlm;
-    ArrayList<Survivor>sl;
+    public SurvivorRender render;
+    public DefaultListModel dlm;
+    private ArrayList<Survivor>sl;
      int idx = -1;
     /**
      * Creates new form SurvivorSelectionWin
      */
     public SurvivorSelectionWin() {
+
         dlm = new DefaultListModel();
         sl = new ArrayList<>();
        
         
         initComponents();
+        render= new SurvivorRender();
+            
+        this.setTitle("Survivor Selection Window");
         try{
             ReadFiles rf = new ReadFiles();
             sl = rf.readSurvivortxtFile();
@@ -38,6 +43,8 @@ public class SurvivorSelectionWin extends javax.swing.JFrame {
           sl.forEach(itm -> {
               dlm.addElement(itm);
                     }); 
+          jList1.setBackground(Color.gray);
+         // jList1.setCellRenderer(render);
           this.setLocationRelativeTo(null);
     }
 

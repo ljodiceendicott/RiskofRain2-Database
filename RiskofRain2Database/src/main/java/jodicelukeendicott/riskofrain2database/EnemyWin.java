@@ -19,6 +19,7 @@ public class EnemyWin extends javax.swing.JFrame {
     }
     public EnemyWin(Enemy e){
         initComponents();
+        this.setTitle(e.getName()+" Information Window");
         lblMonstericon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+e.getName()+".png")));
         lblName.setText(e.getName());
         lblHealth.setText(e.getHealth());

@@ -51,6 +51,7 @@ public class GameItemSelectionWin extends javax.swing.JFrame {
         directory = new Hashtable<>();
         */
           initComponents();
+          this.setTitle("Item Selection Window");
           jbtngetinfo.setEnabled(false);
           try {
             ReadFiles rf = new ReadFiles();

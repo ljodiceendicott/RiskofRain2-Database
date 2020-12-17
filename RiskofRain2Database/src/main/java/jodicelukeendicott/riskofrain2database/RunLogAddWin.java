@@ -31,9 +31,11 @@ public class RunLogAddWin extends javax.swing.JFrame {
      */
     public RunLogAddWin() {
         initComponents();
+        this.setTitle("Run Log Creation Window");
         this.setLocationRelativeTo(null);
     }
     public RunLogAddWin(DefaultListModel dlm, RunLogWin rw) {
+        this.setTitle("Run Log Creation Window");
         items = ReadFiles.getItems();
          survivor = ReadFiles.getSurvivors();
          enemies = ReadFiles.getEnemies();

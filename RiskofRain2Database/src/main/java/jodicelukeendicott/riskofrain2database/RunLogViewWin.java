@@ -19,6 +19,7 @@ public class RunLogViewWin extends javax.swing.JFrame {
     }
     public RunLogViewWin(RunLogEntry en){
         initComponents();
+        this.setName("Run Log Information: "+en.getName());
         jlbTime.setText("Time:"+en.getTime());
         jlbLoops.setText("Loops Complete:"+en.getStagesDone());
         jlcharname.setText(en.getSurvivorplayed());

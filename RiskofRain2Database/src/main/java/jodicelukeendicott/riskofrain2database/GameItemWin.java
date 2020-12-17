@@ -18,6 +18,7 @@ public class GameItemWin extends javax.swing.JFrame {
      */
     public GameItemWin(GameItem itm) {
         initComponents();
+            this.setTitle(itm.getName()+" Information Window");
            jlblitmName.setText(itm.getName());
            lblitmDescript.setText(itm.getPickuptext());
            lblStatChange.setText(itm.getEffect());
@@ -39,6 +40,7 @@ public class GameItemWin extends javax.swing.JFrame {
     public GameItemWin(){
         initComponents();
         this.setLocationRelativeTo(null);
+        this.pack();
     }
 
     /**
@@ -293,7 +295,7 @@ public class GameItemWin extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel4))
-                                .addGap(0, 1070, Short.MAX_VALUE))
+                                .addGap(0, 560, Short.MAX_VALUE))
                             .addComponent(lblStatChange, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
