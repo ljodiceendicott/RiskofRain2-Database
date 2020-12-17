@@ -18,7 +18,7 @@ import static jodicelukeendicott.riskofrain2database.Main.mmw;
  */
 public class SurvivorSelectionWin extends javax.swing.JFrame {
     public SurvivorRender render;
-    public DefaultListModel dlm;
+    public DefaultListModel<Survivor> dlm;
     private ArrayList<Survivor>sl;
      int idx = -1;
     /**
@@ -44,7 +44,7 @@ public class SurvivorSelectionWin extends javax.swing.JFrame {
               dlm.addElement(itm);
                     }); 
           jList1.setBackground(Color.gray);
-         // jList1.setCellRenderer(render);
+          jList1.setCellRenderer(render);
           this.setLocationRelativeTo(null);
     }
 
@@ -283,7 +283,7 @@ public class SurvivorSelectionWin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem exporttoJson;
     private javax.swing.JMenuItem exporttotxt;
-    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<Survivor> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
