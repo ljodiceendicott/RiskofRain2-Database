@@ -20,7 +20,7 @@ public class RunLogViewWin extends javax.swing.JFrame {
     public RunLogViewWin(RunLogEntry en){
         initComponents();
         this.setName("Run Log Information: "+en.getName());
-        jlbTime.setText("Time:"+en.getTime());
+        jlbTime.setText("Time:"+en.getTime()+ "Minutes");
         jlbLoops.setText("Loops Complete:"+en.getStagesDone());
         jlcharname.setText(en.getSurvivorplayed());
         jlcharpic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/"+en.getSurvivorplayed()+".png")));
@@ -41,6 +41,7 @@ public class RunLogViewWin extends javax.swing.JFrame {
         lbdefeated.setText("Defeated");
                 }
         jtpnotes.setText(en.getNotes());
+        this.setTitle(en.getName());
         this.setLocationRelativeTo(null);
     }
 

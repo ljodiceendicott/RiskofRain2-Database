@@ -5,6 +5,7 @@
  */
 package jodicelukeendicott.riskofrain2database;
 
+import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import static javafx.scene.paint.Color.color;
@@ -45,6 +46,8 @@ public class EnemySelectionWin extends javax.swing.JFrame {
               dlm.addElement(e);
                     }); 
          jList1.setCellRenderer(render);
+         jList1.setBackground(Color.gray);
+         jbtntglAll.setEnabled(true);
    this.setLocationRelativeTo(null);
     }
     

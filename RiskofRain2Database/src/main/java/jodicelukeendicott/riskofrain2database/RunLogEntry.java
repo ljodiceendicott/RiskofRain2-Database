@@ -33,7 +33,7 @@ public class RunLogEntry {
   }
    @Override
   public String toString(){
-      return this.runName+"  Time:"+this.time+" Char:"+this.getSurvivorplayed();
+      return this.runName+"  Time:"+this.time+" Minutes";
 }
   public String getName(){
       return runName;
